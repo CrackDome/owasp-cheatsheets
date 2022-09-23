@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -21,13 +21,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
+
     
     
     
@@ -40,10 +41,11 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -51,12 +53,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -103,6 +109,28 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -119,7 +147,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -143,7 +171,7 @@
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -187,7 +215,7 @@
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -1149,8 +1177,8 @@
   
   
     <li class="md-nav__item">
-      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
-        Secrets Management CheatSheet.md
+      <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
+        Secrets Management
       </a>
     </li>
   
@@ -2279,10 +2307,16 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
+  <a href="https://github.com/OWASP/CheatSheetSeries/edit/master/docs/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
 <h1 id="xml-external-entity-prevention-cheat-sheet">XML External Entity Prevention Cheat Sheet<a class="headerlink" href="#xml-external-entity-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
@@ -2582,62 +2616,89 @@
 <h4 id="castor">Castor<a class="headerlink" href="#castor" title="Permanent link">&para;</a></h4>
 <p>Castor is a data binding framework for Java. It allows conversion between Java objects, XML, and relational tables. The XML features in Castor <strong>prior to version 1.3.3</strong> are vulnerable to XXE, and should be upgraded to the latest version. For additional information, check the official <a href="https://castor-data-binding.github.io/castor/reference-guide/reference/xml/xml-properties.html">XML configuration file</a></p>
 <h2 id="net">.NET<a class="headerlink" href="#net" title="Permanent link">&para;</a></h2>
-<p>The following information for XXE injection in .NET is directly from this <a href="https://github.com/deanf1/dotnet-security-unit-tests">web application of unit tests by Dean Fleming</a>.</p>
-<p>This web application covers all currently supported .NET XML parsers, and has test cases for each demonstrating when they are safe from XXE injection and when they are not, but tests are only with injection from file and not direct DTD (used by DoS attacks).</p>
-<p>Previously, this information was based on <a href="https://www.jardinesoftware.net/2016/05/26/xxe-and-net/">James Jardine's excellent .NET XXE article</a>.</p>
-<p>It originally provided more recent and more detailed information than the older article from <a href="http://msdn.microsoft.com/en-us/magazine/ee335713.aspx">Microsoft on how to prevent XXE and XML Denial of Service in .NET</a>, however, it has some inaccuracies that the web application covers.</p>
-<p>The following table lists all supported .NET XML parsers and their default safety levels:</p>
+<p>The following, up to date information for XXE injection in .NET is directly from this <a href="https://github.com/deanf1/dotnet-security-unit-tests">web application of unit tests by Dean Fleming</a>. This web application covers all currently supported .NET XML parsers, and has test cases for each demonstrating when they are safe from XXE injection and when they are not, but tests are only with injection from file and not direct DTD (used by DoS attacks).</p>
+<p>For DoS attacks using a direct DTD (such as the <a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion laughs attack</a>), a <a href="https://github.com/BounceSecurity/BillionLaughsTester">separate testing application from Josh Grossman at Bounce Security</a> has been created to verify that .NET &gt;=4.5.2 is safe from these attacks.</p>
+<p>Previously, this information was based on some older articles which may not be 100% accurate including:</p>
+<ul>
+<li><a href="https://www.jardinesoftware.net/2016/05/26/xxe-and-net/">James Jardine's excellent .NET XXE article</a>.</li>
+<li><a href="http://msdn.microsoft.com/en-us/magazine/ee335713.aspx">Guidance from Microsoft on how to prevent XXE and XML Denial of Service in .NET</a>.</li>
+</ul>
+<p>The following table lists all supported .NET XML parsers and their default safety levels. Note that in .NET Framework ≥4.5.2 <strong>in all cases</strong> if a DoS attempt is performed, an exception is thrown due to the expanded XML being too many characters.</p>
+<p>Table explanation:</p>
+<ul>
+<li>✅ = Not Vulnerable</li>
+<li>❌ = Vulnerable</li>
+<li>❓ = Not clear</li>
+</ul>
 <table>
 <thead>
 <tr>
 <th>Attack Type</th>
-<th>LINQ to XML</th>
-<th>XmlDictionaryReader</th>
-<th>XmlDocument (4.5.2-)</th>
-<th>XmlDocument (4.5.2+)</th>
-<th>XmlNodeReader</th>
-<th>XmlReader</th>
-<th>XmlTextReader(4.5.2-)</th>
-<th>XmlTextReader(4.5.2+)</th>
-<th>XPathNavigator(4.5.2-)</th>
-<th>XPathNavigator(4.5.2+)</th>
-<th>XslCompiledTransform</th>
+<th>.NET Framework Version</th>
+<th align="center"><a href="#linq-to-xml">XDocument (Linq to XML)</a></th>
+<th align="center"><a href="#xmldictionaryreader">XmlDictionaryReader</a></th>
+<th align="center"><a href="#xmldocument">XmlDocument</a></th>
+<th align="center"><a href="#xmlnodereader">XmlNodeReader</a></th>
+<th align="center"><a href="#xmlreader">XmlReader</a></th>
+<th align="center"><a href="#xmltextreader">XmlTextReader</a></th>
+<th align="center"><a href="#xpathnavigator">XPathNavigator</a></th>
+<th align="center"><a href="#xslcompiledtransform">XslCompiledTransform</a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>External entity Attacks</td>
-<td>Safe</td>
-<td>Safe</td>
-<td>Vulnerable</td>
-<td>Safe</td>
-<td>Safe</td>
-<td>Safe</td>
-<td>Vulnerable</td>
-<td>Safe</td>
-<td>Vulnerable</td>
-<td>Safe</td>
-<td>Safe</td>
+<td><strong>External entity Attacks</strong></td>
+<td>&lt;4.5.2</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
 </tr>
 <tr>
-<td>Billion Laughs</td>
-<td>Vulnerable</td>
-<td>N.a.</td>
-<td>Vulnerable</td>
-<td>Vulnerable</td>
-<td>Safe</td>
-<td>Safe</td>
-<td>Vulnerable</td>
-<td>Vulnerable</td>
-<td>Vulnerable</td>
-<td>Vulnerable</td>
-<td>Safe</td>
+<td></td>
+<td>≥4.5.2</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td><strong>Billion Laughs</strong></td>
+<td>&lt;4.5.2</td>
+<td align="center">❓</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td></td>
+<td>≥4.5.2</td>
+<td align="center">✅</td>
+<td align="center">✅*</td>
+<td align="center">✅</td>
+<td align="center">✅*</td>
+<td align="center">✅*</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
 </tr>
 </tbody>
 </table>
+<p>* For .NET Framework Versions ≥4.5.2, these libraries won't even process the in-line DTD by default. Even if you change the default to allow processing a DTD, if a DoS attempt is performed an exception will still be thrown as documented above.</p>
 <h3 id="linq-to-xml">LINQ to XML<a class="headerlink" href="#linq-to-xml" title="Permanent link">&para;</a></h3>
-<p>Both the <code>XElement</code> and <code>XDocument</code> objects in the <code>System.Xml.Linq</code> library are safe from XXE injection drom external file by default, but not for DoS attack. <code>XElement</code> parses only the elements within the XML file, so DTDs are ignored altogether. <code>XDocument</code> has XmlResolver <a href="https://docs.microsoft.com/en-us/dotnet/standard/linq/linq-xml-security">disabled by default</a>, but DTDs <a href="https://referencesource.microsoft.com/#System.Xml.Linq/System/Xml/Linq/XLinq.cs,71f4626a3d6f9bad">enable by default</a>. so it's safe from SSRF but <strong>not</strong> <a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">Billion laughs attack</a>.
-For made safe from between attack types follow <a href="http://msdn.microsoft.com/en-us/magazine/ee335713.aspx">Microsoft on how to prevent XXE and XML Denial of Service in .NET</a></p>
+<p>Both the <code>XElement</code> and <code>XDocument</code> objects in the <code>System.Xml.Linq</code> library are safe from XXE injection from external file and DoS attack by default. <code>XElement</code> parses only the elements within the XML file, so DTDs are ignored altogether. <code>XDocument</code> has XmlResolver <a href="https://docs.microsoft.com/en-us/dotnet/standard/linq/linq-xml-security">disabled by default</a> so it's safe from SSRF. Whilst DTDs are <a href="https://referencesource.microsoft.com/#System.Xml.Linq/System/Xml/Linq/XLinq.cs,71f4626a3d6f9bad">enabled by default</a>, from Framework versions ≥4.5.2, it is <strong>not</strong> vulnerable to DoS as noted but it may be vulnerable in earlier Framework versions. For more information, see <a href="http://msdn.microsoft.com/en-us/magazine/ee335713.aspx">Microsoft's guidance on how to prevent XXE and XML Denial of Service in .NET</a></p>
 <h3 id="xmldictionaryreader">XmlDictionaryReader<a class="headerlink" href="#xmldictionaryreader" title="Permanent link">&para;</a></h3>
 <p><code>System.Xml.XmlDictionaryReader</code> is safe by default, as when it attempts to parse the DTD, the compiler throws an exception saying that "CData elements not valid at top level of an XML document". It becomes unsafe if constructed with a different unsafe XML parser.</p>
 <h3 id="xmldocument">XmlDocument<a class="headerlink" href="#xmldocument" title="Permanent link">&para;</a></h3>
@@ -2657,6 +2718,7 @@ For made safe from between attack types follow <a href="http://msdn.microsoft.co
 <span class="w">   </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
 <span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<p>For .NET Framework version ≥4.5.2, this is <strong>safe by default</strong>.</p>
 <p><code>XmlDocument</code> can become unsafe if you create your own nonnull <code>XmlResolver</code> with default or unsafe settings. If you need to enable DTD processing, instructions on how to do so safely are described in detail in the <a href="https://msdn.microsoft.com/en-us/magazine/ee335713.aspx">referenced MSDN article</a>.</p>
 <h3 id="xmlnodereader">XmlNodeReader<a class="headerlink" href="#xmlnodereader" title="Permanent link">&para;</a></h3>
 <p><code>System.Xml.XmlNodeReader</code> objects are safe by default and will ignore DTDs even when constructed with an unsafe parser or wrapped in another unsafe parser.</p>
@@ -2696,6 +2758,7 @@ For made safe from between attack types follow <a href="http://msdn.microsoft.co
 <span class="n">XPathNavigator</span><span class="w"> </span><span class="n">nav</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="n">CreateNavigator</span><span class="p">();</span><span class="w"></span>
 <span class="kt">string</span><span class="w"> </span><span class="n">xml</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">nav</span><span class="p">.</span><span class="n">InnerXml</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
+<p>For .NET Framework version ≥4.5.2, XPathNavigator is <strong>safe by default</strong>.</p>
 <h3 id="xslcompiledtransform">XslCompiledTransform<a class="headerlink" href="#xslcompiledtransform" title="Permanent link">&para;</a></h3>
 <p><code>System.Xml.Xsl.XslCompiledTransform</code> (an XML transformer) is safe by default as long as the parser it's given is safe.</p>
 <p>It is safe by default because the default parser of the <code>Transform()</code> methods is an <code>XmlReader</code>, which is safe by default (per above).</p>
@@ -2813,10 +2876,15 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
 <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection.html">Testing for XML Injection</a></li>
 </ul>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
@@ -2883,10 +2951,11 @@ Rule can be played here <a href="https://semgrep.dev/s/salecharohit:xxe-XMLReade
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../assets/javascripts/bundle.37e9125f.min.js"></script>
       
     
   </body>
