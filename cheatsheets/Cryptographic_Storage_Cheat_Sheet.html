@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html">
       
+      
+        <link rel="prev" href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">
+      
+      
+        <link rel="next" href="DOM_based_XSS_Prevention_Cheat_Sheet.html">
+      
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -21,11 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -112,8 +117,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -121,8 +124,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -161,7 +162,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -330,17 +331,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Cheatsheets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
@@ -566,7 +568,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -811,6 +813,20 @@
     <li class="md-nav__item">
       <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         Deserialization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
+        Django REST Framework
       </a>
     </li>
   
@@ -1189,6 +1205,20 @@
     <li class="md-nav__item">
       <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
         NPM Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
+        Network Segmentation
       </a>
     </li>
   
@@ -1831,10 +1861,9 @@
                 
                   
 
-  <a href="https://github.com/OWASP/CheatSheetSeries/edit/master/docs/cheatsheets/Cryptographic_Storage_Cheat_Sheet.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="cryptographic-storage-cheat-sheet">Cryptographic Storage Cheat Sheet<a class="headerlink" href="#cryptographic-storage-cheat-sheet" title="Permanent link">&para;</a></h1>
@@ -1844,7 +1873,7 @@
 <h2 id="architectural-design">Architectural Design<a class="headerlink" href="#architectural-design" title="Permanent link">&para;</a></h2>
 <p>The first step in designing any application is to consider the overall architecture of the system, as this will have a huge impact on the technical implementation.</p>
 <p>This process should begin with considering the <a href="Threat_Modeling_Cheat_Sheet.html">threat model</a> of the application (i.e, who you are trying to protect that data against).</p>
-<p>The use of dedicated secret or key management systems can provide an additional layer of security protection, as well as making the management of secrets significantly easier - however it comes at the cost of additional complexity and administrative overhead - so may not be feasible for all applications. Note that many cloud environments provide these services, so these should be taken advantage of where possible.</p>
+<p>The use of dedicated secret or key management systems can provide an additional layer of security protection, as well as making the management of secrets significantly easier - however it comes at the cost of additional complexity and administrative overhead - so may not be feasible for all applications. Note that many cloud environments provide these services, so these should be taken advantage of where possible. The <a href="Secrets_Management_Cheat_Sheet.html">Secrets Management Cheat Sheet</a> contains further guidance on this topic.</p>
 <h3 id="where-to-perform-encryption">Where to Perform Encryption<a class="headerlink" href="#where-to-perform-encryption" title="Permanent link">&para;</a></h3>
 <p>Encryption can be performed on a number of levels in the application stack, such as:</p>
 <ul>
@@ -1995,6 +2024,7 @@
 <li>A physical Hardware Security Module (HSM).</li>
 <li>A virtual HSM.</li>
 <li>Key vaults such as <a href="https://aws.amazon.com/kms/">Amazon KMS</a> or <a href="https://azure.microsoft.com/en-gb/services/key-vault/">Azure Key Vault</a>.</li>
+<li>An external secrets management service such as <a href="https://github.com/cyberark/conjur">Conjur</a> or <a href="https://github.com/hashicorp/vault">HashiCorp Vault</a>.</li>
 <li>Secure storage APIs provided by the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.protecteddata?redirectedfrom=MSDN&amp;view=netframework-4.8">ProtectedData</a> class in the .NET framework.</li>
 </ul>
 <p>There are many advantages to using these types of secure storage over simply putting keys in configuration files. The specifics of these will vary depending on the solution used, but they include:</p>
@@ -2012,6 +2042,7 @@
 <li>Protect the configuration files containing the keys with restrictive permissions.</li>
 <li>Avoid storing keys in environment variables, as these can be accidentally exposed through functions such as <a href="https://www.php.net/manual/en/function.phpinfo.php">phpinfo()</a> or through the <code>/proc/self/environ</code> file.</li>
 </ul>
+<p>The <a href="Secrets_Management_Cheat_Sheet.html">Secrets Management Cheat Sheet</a> provides more details on securely storing secrets.</p>
 <h3 id="separation-of-keys-and-data">Separation of Keys and Data<a class="headerlink" href="#separation-of-keys-and-data" title="Permanent link">&para;</a></h3>
 <p>Where possible, encryption keys should be stored in a separate location from encrypted data. For example, if the data is stored in a database, the keys should be stored in the filesystem. This means that if an attacker only has access to one of these (for example through directory traversal or SQL injection), they cannot access both the keys and the data.</p>
 <p>Depending on the architecture of the environment, it may be possible to store the keys and data on separate systems, which would provide a greater degree of isolation.</p>
@@ -2041,42 +2072,6 @@
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cross Site Scripting Prevention" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Cross Site Scripting Prevention
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: DOM based XSS Prevention" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              DOM based XSS Prevention
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -2102,12 +2097,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
-    
     
   </body>
 </html>

@@ -12,8 +12,14 @@
       
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Securing_Cascading_Style_Sheets_Cheat_Sheet.html">
       
+      
+        <link rel="prev" href="Secrets_Management_Cheat_Sheet.html">
+      
+      
+        <link rel="next" href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">
+      
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -21,11 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -112,8 +117,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -121,8 +124,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -161,7 +162,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -330,17 +331,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Cheatsheets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
@@ -621,6 +623,20 @@
     <li class="md-nav__item">
       <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         Deserialization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
+        Django REST Framework
       </a>
     </li>
   
@@ -1011,6 +1027,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
+        Network Segmentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
         NodeJS Docker
       </a>
@@ -1196,7 +1226,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1262,8 +1292,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defense-mechanism" class="md-nav__link">
-    Defense Mechanism
+  <a href="#defense-mechanism-1" class="md-nav__link">
+    Defense Mechanism #1
   </a>
   
 </li>
@@ -1602,8 +1632,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defense-mechanism" class="md-nav__link">
-    Defense Mechanism
+  <a href="#defense-mechanism-1" class="md-nav__link">
+    Defense Mechanism #1
   </a>
   
 </li>
@@ -1641,10 +1671,9 @@
                 
                   
 
-  <a href="https://github.com/OWASP/CheatSheetSeries/edit/master/docs/cheatsheets/Securing_Cascading_Style_Sheets_Cheat_Sheet.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="securing-cascading-style-sheets-cheat-sheet">Securing Cascading Style Sheets Cheat Sheet<a class="headerlink" href="#securing-cascading-style-sheets-cheat-sheet" title="Permanent link">&para;</a></h1>
@@ -1675,16 +1704,21 @@
 <h3 id="risk-2">Risk #2<a class="headerlink" href="#risk-2" title="Permanent link">&para;</a></h3>
 <p>Let's say, Santhosh has this habit of writing the descriptive selector names like <code>.profileSettings,</code> <code>exportUserData,</code> <code>.changePassword,</code> <code>.oldPassword,</code> <code>.newPassword,</code> <code>.confirmNewPassword</code> etc. Good programmers like to keep code readable and usable by other Code Reviewers of the team. The risk is that attackers could map these selectors to actual features of a web application.</p>
 <h2 id="defensive-mechanisms-to-mitigate-attackers-motivation">Defensive Mechanisms to Mitigate Attacker's Motivation<a class="headerlink" href="#defensive-mechanisms-to-mitigate-attackers-motivation" title="Permanent link">&para;</a></h2>
-<h3 id="defense-mechanism">Defense Mechanism<a class="headerlink" href="#defense-mechanism" title="Permanent link">&para;</a></h3>
+<h3 id="defense-mechanism-1">Defense Mechanism #1<a class="headerlink" href="#defense-mechanism-1" title="Permanent link">&para;</a></h3>
 <p>As a CSS Coder / Programmer, always keep the CSS isolated by access control level. By this, it means <strong>Student</strong> will have a different CSS file called as <code>StudentStyling.CSS</code> while <strong>Administrator</strong> has <code>AdministratorStyling.CSS</code> and so on. Make sure these <code>*.CSS</code> files are accessed only for a user with the proper access control level. Only users with the proper access control level should be able to access their <code>*.CSS</code> file.</p>
 <p>If an authenticated user with the <strong>Student</strong> Role tries to access <code>AdministratorStyling.CSS</code> through forced browsing, an alert that an intrusion is occurring should be recorded.</p>
 <h3 id="defense-mechanism-2">Defense Mechanism #2<a class="headerlink" href="#defense-mechanism-2" title="Permanent link">&para;</a></h3>
-<p>Being a programmer or a tester, take care of the naming conventions of your CSS (Cascading Style Sheet) Selectors. Obfuscate the selector names in such a fashion that attackers are not informed what a specific selector is linking to.</p>
-<p>Example: CSS Selectors for <code>addUser,</code> <code>addAdmin,</code> <code>profileSettings,</code> <code>changePassword</code> could be named <code>aHj879JK,</code> <code>bHjsU,</code> <code>ahkrrE,</code> <code>lOiksn</code> respectively. These names could be randomly generated per user as well.</p>
-<p>This <a href="https://www.npmjs.com/package/rename-css-selectors">NPM package</a> can be used to perform the renaming of the CSS selector.</p>
+<p>Another option is to modify your CSS files to remove any identifying information. As a general rule, it's recommended that your website have a consistent style between pages, and it's best to write your general CSS rules in such a way that they apply across multiple pages. This reduces the need for specific selectors in the first place. Furthermore, it's often possible to create CSS selectors that target specific HTML elements without using IDs or class names. For example, <code>#UserPage .Toolbar .addUserButton</code> could be rewritten to something more obscure such as <code>#page_u header button:first-of-type</code>.</p>
+<p>Build-time and runtime tools also exist, which can be integrated to obfuscate your class names. This can reduce the chance of an attacker guessing the features of your application. Some examples:</p>
+<ul>
+<li><a href="https://cssinjs.org">JSS</a> (CSS in JS) has a <code>minify</code> option which would generate class names such as <code>.c001</code>, <code>.c002</code>.</li>
+<li><a href="https://github.com/css-modules/css-modules">CSS Modules</a> has a <code>modules</code> and <code>localIdentName</code> option, which functions similarly to JSS, but allows importing any CSS file without major structural changes to your application.</li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation">.Net Blazor CSS Isolation</a> can be used to scope your CSS to the component it's used in, and results in selectors like <code>button.add[b-3xxtam6d07]</code>.</li>
+<li>CSS libraries such as <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://tailwindcss.com">Tailwind</a> can reduce the need for specific CSS selectors as they provide a strong base theme to work from.</li>
+</ul>
 <h3 id="defense-mechanism-3">Defense Mechanism #3<a class="headerlink" href="#defense-mechanism-3" title="Permanent link">&para;</a></h3>
 <p>Web applications that allow users to author content via HTML input could be vulnerable to malicious use of CSS. Uploaded HTML could use styles that are allowed by the web application but could be used for purposes other than intended which could lead to security risks.</p>
-<p>Example: You can read about how <a href="https://www.scmagazineuk.com/style-sheet-vulnerability-allowed-attacker-hijack-linkedin-pages/article/1479529">LinkedIn</a> had a vulnerability which allowed malicious use of CSS that lead to the authoring of a page where the entire page was clickable including overwriting LinkedIn's standard navigation elements.</p>
+<p>Example: You can read about how <a href="https://www.scmagazine.com/news/vulnerability-management/style-sheet-vulnerability-allowed-attacker-to-hijack-linkedin-pages">LinkedIn</a> had a vulnerability which allowed malicious use of CSS to execute a <a href="https://owasp.org/www-community/attacks/Clickjacking">Clickjacking</a> attack. This caused the document to enter a state where clicking anywhere on the page would result in loading a potentially malicious website. You can read more about mitigating clickjacking attacks <a href="Clickjacking_Defense_Cheat_Sheet.html">here</a>.</p>
 
 
 
@@ -1700,42 +1734,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="Secrets_Management_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Secrets Management" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Secrets Management
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Server Side Request Forgery Prevention" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Server Side Request Forgery Prevention
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1762,12 +1760,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
-    
     
   </body>
 </html>
