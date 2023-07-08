@@ -19,7 +19,7 @@
         <link rel="next" href="Error_Handling_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -87,7 +87,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
@@ -114,25 +116,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -174,7 +182,7 @@
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -218,7 +226,7 @@
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -579,6 +587,20 @@
   
   
     <li class="md-nav__item">
+      <a href="DOM_Clobbering_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        DOM Clobbering Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         DOM based XSS Prevention
       </a>
@@ -746,9 +768,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#encryption" class="md-nav__link">
-    Encryption
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
   </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-cryptography-guidance" class="md-nav__link">
+    General cryptography guidance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-for-storage" class="md-nav__link">
+    Encryption for storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-for-transmission" class="md-nav__link">
+    Encryption for transmission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -968,7 +1024,7 @@
     A10 Insufficient Logging &amp; Monitoring
   </a>
   
-    <nav class="md-nav" aria-label="A10 Insufficient Logging &amp; Monitoring">
+    <nav class="md-nav" aria-label="A10 Insufficient Logging & Monitoring">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1253,6 +1309,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Java_Security_Cheat_Sheet.html" class="md-nav__link">
+        Java Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
         Key Management
       </a>
@@ -1351,8 +1421,8 @@
   
   
     <li class="md-nav__item">
-      <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
-        Microservices based Security Arch Doc
+      <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
+        Microservices Security
       </a>
     </li>
   
@@ -1365,8 +1435,8 @@
   
   
     <li class="md-nav__item">
-      <a href="Microservices_security.html" class="md-nav__link">
-        Microservices security.md
+      <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
+        Microservices based Security Arch Doc
       </a>
     </li>
   
@@ -1505,6 +1575,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Prototype_Pollution_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        Prototype Pollution Prevention
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         Query Parameterization
       </a>
@@ -1591,6 +1675,34 @@
     <li class="md-nav__item">
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         Secrets Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secure_Cloud_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        Secure Cloud Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
+        Secure Product Design
       </a>
     </li>
   
@@ -1931,9 +2043,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#encryption" class="md-nav__link">
-    Encryption
+  <a href="#cryptography" class="md-nav__link">
+    Cryptography
   </a>
+  
+    <nav class="md-nav" aria-label="Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-cryptography-guidance" class="md-nav__link">
+    General cryptography guidance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-for-storage" class="md-nav__link">
+    Encryption for storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-for-transmission" class="md-nav__link">
+    Encryption for transmission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2153,7 +2299,7 @@
     A10 Insufficient Logging &amp; Monitoring
   </a>
   
-    <nav class="md-nav" aria-label="A10 Insufficient Logging &amp; Monitoring">
+    <nav class="md-nav" aria-label="A10 Insufficient Logging & Monitoring">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2245,7 +2391,6 @@
   
 
 
-
 <h1 id="dotnet-security-cheat-sheet">DotNet Security Cheat Sheet<a class="headerlink" href="#dotnet-security-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This page intends to provide quick basic .NET security tips for developers.</p>
@@ -2276,10 +2421,223 @@
 <li>When using SQL Server, prefer <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/using-integrated-authentication?view=sql-server-2017">integrated authentication</a> over <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-2017#connecting-through-sql-server-authentication">SQL authentication</a>.</li>
 <li>Use <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine">Always Encrypted</a> where possible for sensitive data (SQL Server 2016 and SQL Azure),</li>
 </ul>
-<h3 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">&para;</a></h3>
+<h3 id="cryptography">Cryptography<a class="headerlink" href="#cryptography" title="Permanent link">&para;</a></h3>
+<h4 id="general-cryptography-guidance">General cryptography guidance<a class="headerlink" href="#general-cryptography-guidance" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Never, ever write your own encryption.</strong></li>
+<li><strong>Never, ever write your own cryptographic functions.</strong></li>
+<li>Wherever possible, try and avoid writing any cryptographic code at all. Instead try and either use pre-existing secret management solutions or the secret management solution provided by your cloud provider. For more information, see the <a href="/Secrets_Management_Cheat_Sheet">OWASP Secrets Management Cheat Sheet</a>.</li>
+<li>If you cannot use a pre-existing secret management solution, try and use a trusted and well known implementation library rather than using the libraries built into .NET as it is far too easy to make cryptographic errors with them.</li>
+<li>Make sure your application or protocol can easily support a future change of cryptographic algorithms.</li>
+<li>Use <a href="https://docs.microsoft.com/en-us/nuget/">NuGet</a> to keep all of your packages up to date. Watch the updates on your development setup, and plan updates to your applications accordingly.</li>
+</ul>
+<h4 id="encryption-for-storage">Encryption for storage<a class="headerlink" href="#encryption-for-storage" title="Permanent link">&para;</a></h4>
+<ul>
 <li>Use the <a href="https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection">Windows Data Protection API (DPAPI)</a> for secure local storage of sensitive data.</li>
+<li>Where DPAPI cannot be used, follow the algorithm guidance in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#algorithms">OWASP Cryptographic Storage Cheat Sheet</a>.</li>
+</ul>
+<p>The following code snippet shows an example of using AES-GCM to perform encryption/decryption of data. It is strongly recommended to have a cryptography expert review your final design and code, as even the most trivial error can severely weaken your encryption.</p>
+<p>The code is based on example from here: <a href="https://www.scottbrady91.com/c-sharp/aes-gcm-dotnet">https://www.scottbrady91.com/c-sharp/aes-gcm-dotnet</a></p>
+<p>A few constraints/pitfalls with this code:</p>
+<ul>
+<li>It does not take into account key rotation or management which is a whole topic in itself.</li>
+<li>It is important to use a different nonce for every encryption operation, even if the same key is used.</li>
+<li>The key will need to be stored securely.</li>
+</ul>
+<details>
+  <summary>Click here to view the "AES-GCM symmetric encryption" code snippet.</summary>
+
+<div class="highlight"><pre><span></span><code><span class="c1">// Code based on example from here:</span>
+<span class="c1">// https://www.scottbrady91.com/c-sharp/aes-gcm-dotnet</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AesGcmSimpleTest</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Key of 32 bytes / 256 bits for AES</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="m">32</span><span class="p">];</span>
+<span class="w">        </span><span class="n">RandomNumberGenerator</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// MaxSize = 12 bytes / 96 bits and this size should always be used.</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">nonce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">AesGcm</span><span class="p">.</span><span class="n">NonceByteSizes</span><span class="p">.</span><span class="n">MaxSize</span><span class="p">];</span>
+<span class="w">        </span><span class="n">RandomNumberGenerator</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">nonce</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Tag for authenticated encryption</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">AesGcm</span><span class="p">.</span><span class="n">TagByteSizes</span><span class="p">.</span><span class="n">MaxSize</span><span class="p">];</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;This message to be encrypted&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Encrypt the message</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">cipherText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AesGcmSimple</span><span class="p">.</span><span class="n">Encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">cipherText</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Decrypt the message</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">message2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AesGcmSimple</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">cipherText</span><span class="p">,</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message2</span><span class="p">);</span>
+
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AesGcmSimple</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="nf">Encrypt</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">plaintext</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">using</span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">aes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AesGcm</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Tag for authenticated encryption</span>
+<span class="w">            </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">AesGcm</span><span class="p">.</span><span class="n">TagByteSizes</span><span class="p">.</span><span class="n">MaxSize</span><span class="p">];</span>
+
+<span class="w">            </span><span class="c1">// Create a byte array from the message to encrypt</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">plaintextBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">plaintext</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Ciphertext will be same length in bytes as plaintext </span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">ciphertext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">plaintextBytes</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
+
+<span class="w">            </span><span class="c1">// perform the actual encryption</span>
+<span class="w">            </span><span class="n">aes</span><span class="p">.</span><span class="n">Encrypt</span><span class="p">(</span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">plaintextBytes</span><span class="p">,</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Decrypt</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">using</span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">aes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AesGcm</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Plaintext will be same length in bytes as Ciphertext </span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">plaintextBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">ciphertext</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
+
+<span class="w">            </span><span class="c1">// perform the actual decryption</span>
+<span class="w">            </span><span class="n">aes</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">plaintextBytes</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="n">plaintextBytes</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<h4 id="encryption-for-transmission">Encryption for transmission<a class="headerlink" href="#encryption-for-transmission" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Again, follow the algorithm guidance in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#algorithms">OWASP Cryptographic Storage Cheat Sheet</a>.</li>
+</ul>
+<p>The following code snippet shows an example of using Eliptic Curve/Diffie Helman (ECDH) together with AES-GCM to perform encryption/decryption of data between two different sides without the need the transfer the symmetric key between the two sides. Instead, the sides exchange public keys and can then use ECDH to generate a shared secret which can be used for the symmetric encryption.</p>
+<p>Again, it is strongly recommended to have a cryptography expert review your final design and code, as even the most trivial error can severely weaken your encryption.</p>
+<p>Note that this code sample relies on the AesGcmSimple class from the <a href="#encryption-for-storage">previous section</a>.</p>
+<p>A few constraints/pitfalls with this code:</p>
+<ul>
+<li>It does not take into account key rotation or management which is a whole topic in itself.</li>
+<li>The code deliberately enforces a new nonce for every encryption operation but this must be managed as a separate data item alongside the ciphertext.</li>
+<li>The private keys will need to be stored securely.</li>
+<li>The code does not consider the validation of public keys before use.</li>
+<li>Overall, there is no verification of authenticity between the two sides.</li>
+</ul>
+<details>
+  <summary>Click here to view the "ECDH asymmetric encryption" code snippet.</summary>
+
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ECDHSimpleTest</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Generate ECC key pair for Alice</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">alice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ECDHSimple</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">alicePublicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alice</span><span class="p">.</span><span class="n">PublicKey</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Generate ECC key pair for Bob</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">bob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ECDHSimple</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bobPublicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="n">PublicKey</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">plaintext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, Bob! How are you?&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Secret being sent from Alice to Bob: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plaintext</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Note that a new nonce is generated with every encryption operation in line with</span>
+<span class="w">        </span><span class="c1">// in line with the AES GCM security </span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">cipherText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alice</span><span class="p">.</span><span class="n">Encrypt</span><span class="p">(</span><span class="n">bobPublicKey</span><span class="p">,</span><span class="w"> </span><span class="n">plaintext</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">tag</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Ciphertext, nonce, and tag being sent from Alice to Bob: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">cipherText</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">nonce</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">tag</span><span class="p">));</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">decrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">alicePublicKey</span><span class="p">,</span><span class="w"> </span><span class="n">cipherText</span><span class="p">,</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Secret received by Bob from Alice: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">decrypted</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">plaintext2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello, Alice! I&#39;m good, how are you?&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Secret being sent from Bob to Alice: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plaintext2</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">cipherText2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="n">Encrypt</span><span class="p">(</span><span class="n">alicePublicKey</span><span class="p">,</span><span class="w"> </span><span class="n">plaintext2</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">nonce2</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">tag2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Ciphertext, nonce, and tag being sent from Bob to Alice: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">cipherText2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">nonce2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">tag2</span><span class="p">));</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">decrypted2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alice</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">bobPublicKey</span><span class="p">,</span><span class="w"> </span><span class="n">cipherText2</span><span class="p">,</span><span class="w"> </span><span class="n">nonce2</span><span class="p">,</span><span class="w"> </span><span class="n">tag2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Secret received by Alice from Bob: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">decrypted2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ECDHSimple</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">ECDiffieHellmanCng</span><span class="w"> </span><span class="n">ecdh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ECDiffieHellmanCng</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">PublicKey</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">get</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ecdh</span><span class="p">.</span><span class="n">PublicKey</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="nf">Encrypt</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">partnerPublicKey</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Generate the AES Key and Nonce</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">aesKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerateAESKey</span><span class="p">(</span><span class="n">partnerPublicKey</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Tag for authenticated encryption</span>
+<span class="w">        </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">AesGcm</span><span class="p">.</span><span class="n">TagByteSizes</span><span class="p">.</span><span class="n">MaxSize</span><span class="p">];</span>
+
+<span class="w">        </span><span class="c1">// MaxSize = 12 bytes / 96 bits and this size should always be used.</span>
+<span class="w">        </span><span class="c1">// A new nonce is generated with every encryption operation in line with</span>
+<span class="w">        </span><span class="c1">// the AES GCM security model</span>
+<span class="w">        </span><span class="n">nonce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">AesGcm</span><span class="p">.</span><span class="n">NonceByteSizes</span><span class="p">.</span><span class="n">MaxSize</span><span class="p">];</span>
+<span class="w">        </span><span class="n">RandomNumberGenerator</span><span class="p">.</span><span class="n">Fill</span><span class="p">(</span><span class="n">nonce</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// return the encrypted value</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">AesGcmSimple</span><span class="p">.</span><span class="n">Encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">aesKey</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Decrypt</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">partnerPublicKey</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">tag</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Generate the AES Key and Nonce</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">aesKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerateAESKey</span><span class="p">(</span><span class="n">partnerPublicKey</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// return the decrypted value</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">AesGcmSimple</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">aesKey</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="nf">GenerateAESKey</span><span class="p">(</span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">partnerPublicKey</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Derive the secret based on this side&#39;s private key and the other side&#39;s public key </span>
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ecdh</span><span class="p">.</span><span class="n">DeriveKeyMaterial</span><span class="p">(</span><span class="n">CngKey</span><span class="p">.</span><span class="n">Import</span><span class="p">(</span><span class="n">partnerPublicKey</span><span class="p">,</span><span class="w"> </span><span class="n">CngKeyBlobFormat</span><span class="p">.</span><span class="n">EccPublicBlob</span><span class="p">));</span>
+
+<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">aesKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="m">32</span><span class="p">];</span><span class="w"> </span><span class="c1">// 256-bit AES key</span>
+<span class="w">        </span><span class="n">Array</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">secret</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">aesKey</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">32</span><span class="p">);</span><span class="w"> </span><span class="c1">// Copy first 32 bytes as the key</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">aesKey</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<h4 id="hashing">Hashing<a class="headerlink" href="#hashing" title="Permanent link">&para;</a></h4>
+<ul>
 <li>Use a strong hash algorithm.<ul>
 <li>In .NET (both Framework and Core) the strongest hashing algorithm for general hashing requirements is <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.sha512">System.Security.Cryptography.SHA512</a>.</li>
 <li>In the .NET framework the strongest algorithm for password hashing is PBKDF2, implemented as <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.rfc2898derivebytes">System.Security.Cryptography.Rfc2898DeriveBytes</a>.</li>
@@ -2287,8 +2645,6 @@
 <li>When using a hashing function to hash non-unique inputs such as passwords, use a salt value added to the original value before hashing.</li>
 </ul>
 </li>
-<li>Make sure your application or protocol can easily support a future change of cryptographic algorithms.</li>
-<li>Use <a href="https://docs.microsoft.com/en-us/nuget/">NuGet</a> to keep all of your packages up to date. Watch the updates on your development setup, and plan updates to your applications accordingly.</li>
 </ul>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2512,7 +2868,7 @@
 <p>DO: Try to only accept characters which are simple alphanumeric.</p>
 <p>DO NOT: Assume you can sanitize special characters without actually removing them. Various combinations of <code>\</code>, <code>'</code> and <code>@</code> may have an unexpected impact on sanitization attempts.</p>
 <p>DO NOT: Rely on methods without a security guarantee.</p>
-<p>e.g. .NET Core 2.2 and greater and .NET 5 and greater support <a href="https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.argumentlist">ProcessStartInfo.ArgumentList</a> which performs some character escaping but it is not clear if this is guaranteed to be secure.</p>
+<p>e.g. .NET Core 2.2 and greater and .NET 5 and greater support <a href="https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.argumentlist">ProcessStartInfo.ArgumentList</a> which performs some character escaping but the object includes <a href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.argumentlist#remarks">a disclaimer that it is not safe with untrusted input</a>.</p>
 <p>DO: Look at alternatives to passing raw untrusted arguments via command-line parameters such as encoding using Base64 (which would safely encode any special characters as well) and then decode the parameters in the receiving application.</p>
 <h4 id="ldap-injection">LDAP injection<a class="headerlink" href="#ldap-injection" title="Permanent link">&para;</a></h4>
 <p>Almost any characters can be used in Distinguished Names. However, some must be escaped with the backslash <code>\</code> escape character. A table showing which characters that should be escaped for Active Directory can be found at the in the <a href="LDAP_Injection_Prevention_Cheat_Sheet.html#introduction">LDAP Injection Prevention Cheat Sheet</a>.</p>
@@ -2993,10 +3349,10 @@ If a deserialized hostile object tries to initiate a system processes or access 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
