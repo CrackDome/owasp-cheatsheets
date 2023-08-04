@@ -19,7 +19,7 @@
         <link rel="next" href="Secure_Product_Design_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
@@ -2136,22 +2136,22 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">No direct access to data</td>
-<td align="center">Potential use of broad IAM policy</td>
+<td style="text-align: center;">No direct access to data</td>
+<td style="text-align: center;">Potential use of broad IAM policy</td>
 </tr>
 <tr>
-<td align="center">No user visibility to object storage</td>
-<td align="center">Credential loss gives access to control plane APIs</td>
+<td style="text-align: center;">No user visibility to object storage</td>
+<td style="text-align: center;">Credential loss gives access to control plane APIs</td>
 </tr>
 <tr>
-<td align="center">Identifiable and loggable access</td>
-<td align="center">Credentials could be hardcoded</td>
+<td style="text-align: center;">Identifiable and loggable access</td>
+<td style="text-align: center;">Credentials could be hardcoded</td>
 </tr>
 </tbody>
 </table>
@@ -2161,22 +2161,22 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Access to only one resource</td>
-<td align="center">Anonymous Access</td>
+<td style="text-align: center;">Access to only one resource</td>
+<td style="text-align: center;">Anonymous Access</td>
 </tr>
 <tr>
-<td align="center">Minimal user visibility to object storage</td>
-<td align="center">Anyone can access with URL</td>
+<td style="text-align: center;">Minimal user visibility to object storage</td>
+<td style="text-align: center;">Anyone can access with URL</td>
 </tr>
 <tr>
-<td align="center">Efficient file transfer</td>
-<td align="center">Possibility of injection with custom code</td>
+<td style="text-align: center;">Efficient file transfer</td>
+<td style="text-align: center;">Possibility of injection with custom code</td>
 </tr>
 </tbody>
 </table>
@@ -2185,26 +2185,26 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Efficient access to many resources</td>
-<td align="center">Anyone can access/No privacy</td>
+<td style="text-align: center;">Efficient access to many resources</td>
+<td style="text-align: center;">Anyone can access/No privacy</td>
 </tr>
 <tr>
-<td align="center">Simple public file share</td>
-<td align="center">Unauthenticated access to objects</td>
+<td style="text-align: center;">Simple public file share</td>
+<td style="text-align: center;">Unauthenticated access to objects</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">Visibility into full file system</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Visibility into full file system</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">Accidently leak stored info</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Accidently leak stored info</td>
 </tr>
 </tbody>
 </table>
@@ -2243,7 +2243,7 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <p>This architecture prevents less hardened backend components or higher risk services like databases from being exposed to the internet directly. It also provides common, public functionality access to the internet to avoid additional routing overhead. This architecture can be secured more easily by focusing on security at the entry points and separating functionality, putting non-public or sensitive information inside a private subnet where it will be harder to access by external parties.</p>
 <h2 id="trust-boundaries">Trust Boundaries<a class="headerlink" href="#trust-boundaries" title="Permanent link">&para;</a></h2>
 <p>Trust boundaries are connections between components within a system where a trust decision has to be made by the components. Another way to phrase it, this boundary is a point where two components with potentially different trust levels meet. These boundaries can range in scale, from the degrees of trust given to users interacting with an application, to trusting or verifying specific claims between code functions or components within a cloud architecture. Generally speaking however, trusting each component to perform its function correctly and securely, suffices. Therefore, trust boundaries likely will occur in the connections between cloud components, and between the application and third party elements, like end users and other vendors.  </p>
-<p>As an example, consider the architecture below. An API gateway connects to a compute instance (ephemeral or persistent), which then accesses a persistent storage resource. Separately, there exists a server which can verify the authentication, authorization and/or identity of the caller. This is a generic representation of an OAuth, IAM or directory system, which controls access to these resources. Additionally, there exists an Ephemeral IAM server which controls access for the stored resources (using an approach like the [IAM Access][#iam-access] section above). As shown by the dotted lines, trust boundaries exist between each compute component, the API gateway and the auth/identity server, even though many or all of the elements could be in the same application.</p>
+<p>As an example, consider the architecture below. An API gateway connects to a compute instance (ephemeral or persistent), which then accesses a persistent storage resource. Separately, there exists a server which can verify the authentication, authorization and/or identity of the caller. This is a generic representation of an OAuth, IAM or directory system, which controls access to these resources. Additionally, there exists an Ephemeral IAM server which controls access for the stored resources (using an approach like the <a href="#iam-access">IAM Access</a> section above). As shown by the dotted lines, trust boundaries exist between each compute component, the API gateway and the auth/identity server, even though many or all of the elements could be in the same application.</p>
 <p><img alt="Trust Boundaries" src="../assets/Secure_Cloud_Architecture_Trust_Boundaries_1.png" /></p>
 <h3 id="exploring-different-levels-of-trust">Exploring Different Levels of Trust<a class="headerlink" href="#exploring-different-levels-of-trust" title="Permanent link">&para;</a></h3>
 <p>Architects have to select a trust configuration between components, using quantative factors like risk score/tolerance, velocity of project, as well as subjective security goals. Each example below details trust boundary relationships to better explain the implications of trusting a certain resource. The threat level of a specific resource as a color from green (safe) to red (dangerous) will outline which resources shouldn't be trusted.</p>
@@ -2256,22 +2256,22 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">High assurance of data integrity</td>
-<td align="center">Slow and inefficient</td>
+<td style="text-align: center;">High assurance of data integrity</td>
+<td style="text-align: center;">Slow and inefficient</td>
 </tr>
 <tr>
-<td align="center">Defense in depth</td>
-<td align="center">Complicated</td>
+<td style="text-align: center;">Defense in depth</td>
+<td style="text-align: center;">Complicated</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">Likely more expensive</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Likely more expensive</td>
 </tr>
 </tbody>
 </table>
@@ -2282,22 +2282,22 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Efficient</td>
-<td align="center">Insecure</td>
+<td style="text-align: center;">Efficient</td>
+<td style="text-align: center;">Insecure</td>
 </tr>
 <tr>
-<td align="center">Simple</td>
-<td align="center">Potentially Wasteful</td>
+<td style="text-align: center;">Simple</td>
+<td style="text-align: center;">Potentially Wasteful</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">High risk of compromise</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">High risk of compromise</td>
 </tr>
 </tbody>
 </table>
@@ -2309,18 +2309,18 @@ Therefore, enterprises must perform risk assessments, threat modeling activites,
 <table>
 <thead>
 <tr>
-<th align="center">Pros</th>
-<th align="center">Cons</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">Secured based on risk</td>
-<td align="center">Known gaps in security</td>
+<td style="text-align: center;">Secured based on risk</td>
+<td style="text-align: center;">Known gaps in security</td>
 </tr>
 <tr>
-<td align="center">Cost/Efficiency derived from criticality</td>
-<td align="center"></td>
+<td style="text-align: center;">Cost/Efficiency derived from criticality</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
