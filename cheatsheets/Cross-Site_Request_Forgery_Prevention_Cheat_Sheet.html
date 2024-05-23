@@ -824,11 +824,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disallowing-non-simple-requests" class="md-nav__link">
-    Disallowing non-simple requests
+  <a href="#disallowing-simple-requests" class="md-nav__link">
+    Disallowing simple requests
   </a>
   
-    <nav class="md-nav" aria-label="Disallowing non-simple requests">
+    <nav class="md-nav" aria-label="Disallowing simple requests">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2723,11 +2723,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disallowing-non-simple-requests" class="md-nav__link">
-    Disallowing non-simple requests
+  <a href="#disallowing-simple-requests" class="md-nav__link">
+    Disallowing simple requests
   </a>
   
-    <nav class="md-nav" aria-label="Disallowing non-simple requests">
+    <nav class="md-nav" aria-label="Disallowing simple requests">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3065,14 +3065,14 @@ response.setCookie(&quot;csrf_token=&quot; + csrfToken + &quot;; Secure&quot;) /
 <p>The <em>Naive Double-Submit Cookie</em> method is a scalable and easy-to-implement technique which uses a cryptographically strong random value as a cookie and as a request parameter (even before user authentication). Then the server verifies if the cookie value and request value match. The site must require that every transaction request from the user includes this random value as a hidden form value or inside the request header. If the value matches at server side, the server accepts it as a legitimate request and if they don't, it rejects the request.</p>
 <p>Since an attacker is unable to access the cookie value during a cross-site request, they cannot include a matching value in the hidden form value or as a request parameter/header.</p>
 <p>Though the Naive Double-Submit Cookie method is a good initial step to counter CSRF, it still remains vulnerable to certain attacks. <a href="https://owasp.org/www-chapter-london/assets/slides/David_Johansson-Double_Defeat_of_Double-Submit_Cookie.pdf">This resource</a> provides more information on some vulnerabilities. Thus, we strongly recommend that you use the <em>Signed Double-Submit Cookie</em> pattern.</p>
-<h2 id="disallowing-non-simple-requests">Disallowing non-simple requests<a class="headerlink" href="#disallowing-non-simple-requests" title="Permanent link">&para;</a></h2>
+<h2 id="disallowing-simple-requests">Disallowing simple requests<a class="headerlink" href="#disallowing-simple-requests" title="Permanent link">&para;</a></h2>
 <p>When a <code>&lt;form&gt;</code> tag is used to submit data, it sends a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests">"simple" request</a> that browsers do not designate as "to be preflighted". These "simple" requests introduce risk of CSRF because browsers permit them to be sent to any origin. If your application uses <code>&lt;form&gt;</code> tags to submit data anywhere in your client, you will still need to protect them with alternate approaches described in this document such as tokens.</p>
 <blockquote>
 <p><strong>Caveat:</strong>
 Should a browser bug allow custom HTTP headers, or not enforce preflight on non-simple content types, it could compromise your security. Although unlikely, it is prudent to consider this in your threat model. Implementing CSRF tokens adds additional layer of defence and gives developers more control over security of the application.</p>
 </blockquote>
 <h3 id="disallowing-simple-content-types">Disallowing simple content types<a class="headerlink" href="#disallowing-simple-content-types" title="Permanent link">&para;</a></h3>
-<p>For a request to be deemed simple, it must have one of the following content types - <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> or <code>text/plain</code>.  Many modern web applications use JSON APIs so would naturally require CORS, however they may accept <code>text/plain</code> which would be vulnerable to CSRF. Therefore a simple migitation is for the server or API to disallow these simple content types.</p>
+<p>For a request to be deemed simple, it must have one of the following content types - <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> or <code>text/plain</code>.  Many modern web applications use JSON APIs so would naturally require CORS, however they may accept <code>text/plain</code> which would be vulnerable to CSRF. Therefore a simple mitigation is for the server or API to disallow these simple content types.</p>
 <h3 id="employing-custom-request-headers-for-ajaxapi">Employing Custom Request Headers for AJAX/API<a class="headerlink" href="#employing-custom-request-headers-for-ajaxapi" title="Permanent link">&para;</a></h3>
 <p>Both the synchronizer token and the double-submit cookie are used to prevent forgery of form data, but they can be tricky to implement and degrade usability. Many modern web applications do not use <code>&lt;form&gt;</code> tags to submit data. A user-friendly defense that is particularly well suited for AJAX or API endpoints is the use of a <strong>custom request header</strong>. No token is needed for this approach.</p>
 <p>In this pattern, the client appends a custom header to requests that require CSRF protection. The header can be any arbitrary key-value pair, as long as it does not conflict with existing headers.</p>
@@ -3183,18 +3183,34 @@ Set-Cookie: JSESSIONID=xxxxx; SameSite=Lax
 </ul>
 <p>Usually, a minor percentage of traffic does fall under above categories (<a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">1-2%</a>) and no enterprise would want to lose this traffic. One of the popular technique used across the Internet to make this technique more usable is to accept the request if the Origin/referrer matches your configured list of domains "OR" a null value (Examples <a href="http://homakov.blogspot.com/2012/04/playing-with-referer-origin-disquscom.html">here</a>. The null value is to cover the edge cases mentioned above where these headers are not sent). Please note that, attackers can exploit this but people prefer to use this technique as a defense in depth measure because of the minor effort involved in deploying it.</p>
 <h4 id="using-cookies-with-host-prefixes-to-identify-origins">Using Cookies with Host Prefixes to Identify Origins<a class="headerlink" href="#using-cookies-with-host-prefixes-to-identify-origins" title="Permanent link">&para;</a></h4>
-<p>Another solution for this problem is using <code>Cookie Prefixes</code> for cookies with CSRF tokens. If cookies have <code>__Host-</code> prefixes e.g. <code>Set-Cookie: __Host-token=RANDOM; path=/; Secure</code> then each cookie:</p>
+<p>While the <code>SameSite</code> and <code>Secure</code> attributes mentioned earlier restrict the sending of already set cookies
+and <code>HttpOnly</code> restricts the reading of a set cookie,
+an attacker may still try to inject or overwrite otherwise secured cookies
+(cf. <a href="http://www.acrossecurity.com/papers/session_fixation.pdf">session fixation attacks</a>).
+Using <code>Cookie Prefixes</code> for cookies with CSRF tokens extends security protections against this kind of attacks as well.
+If cookies have <code>__Host-</code> prefixes e.g. <code>Set-Cookie: __Host-token=RANDOM; path=/; Secure</code> then each cookie:</p>
 <ul>
-<li>Cannot be (over)written from another subdomain.</li>
+<li>Cannot be (over)written from another subdomain and</li>
+<li>cannot have a <code>Domain</code> attribute.</li>
 <li>Must have the path of <code>/</code>.</li>
 <li>Must be marked as Secure (i.e, cannot be sent over unencrypted HTTP).</li>
 </ul>
+<p>In addition to the <code>__Host-</code> prefix, the weaker <code>__Secure-</code> prefix is also supported by browser vendors.
+It relaxes the restrictions on domain overwrites, i.e., they</p>
+<ul>
+<li>Can have <code>Domain</code> attributes and</li>
+<li>can be overwritten by subdomains.</li>
+<li>Can have a <code>Path</code> other than <code>/</code>.</li>
+</ul>
+<p>This relaxed variant can be used as an alternative to the "domain locked" <code>__Host-</code> prefix,
+if authenticated users would need to visit different (sub-)domains.
+In all other cases, using the <code>__Host-</code> prefix in addition to the <code>SameSite</code> attribute is recommended.</p>
 <p>As of July 2020 cookie prefixes <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">are supported by all major browsers</a>.</p>
 <p>See the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Directives">Mozilla Developer Network</a> and <a href="https://tools.ietf.org/html/draft-west-cookie-prefixes-05">IETF Draft</a> for further information about cookie prefixes.</p>
 <h3 id="user-interaction-based-csrf-defense">User Interaction-Based CSRF Defense<a class="headerlink" href="#user-interaction-based-csrf-defense" title="Permanent link">&para;</a></h3>
 <p>While all the techniques referenced here do not require any user interaction, sometimes it's easier or more appropriate to involve the user in the transaction to prevent unauthorized operations (forged via CSRF or otherwise). The following are some examples of techniques that can act as strong CSRF defense when implemented correctly.</p>
 <ul>
-<li>~~Re-Authentication~~Authorization mechanisms (password or stronger)</li>
+<li>Re-Authentication mechanisms</li>
 <li>One-time Tokens</li>
 </ul>
 <p>Do NOT use CAPTCHA because it is specifically designed to protect against bots. It is possible, and still valid in some implementations of CAPTCHA, to obtain proof of human interaction/presence from a different user session. Although this makes the CSRF exploit more complex, it does not protect against it.</p>
