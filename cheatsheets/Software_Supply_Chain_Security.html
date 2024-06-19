@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security.html">
       
       
-        <link rel="prev" href="Injection_Prevention_in_Java_Cheat_Sheet.html">
+        <link rel="prev" href="Session_Management_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">
+        <link rel="next" href="Symfony_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Input Validation - OWASP Cheat Sheet Series</title>
+        <title>Software Supply Chain Security.md - OWASP Cheat Sheet Series</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-validation-cheat-sheet" class="md-skip">
+        <a href="#software-supply-chain-security" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input Validation
+              Software Supply Chain Security.md
             
           </span>
         </div>
@@ -1122,29 +1122,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Input Validation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,211 +1133,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goals-of-input-validation" class="md-nav__link">
-    Goals of Input Validation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#input-validation-strategies" class="md-nav__link">
-    Input Validation Strategies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementing-input-validation" class="md-nav__link">
-    Implementing Input Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementing Input Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#allowlist-vs-denylist" class="md-nav__link">
-    Allowlist vs Denylist
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validating-free-form-unicode-text" class="md-nav__link">
-    Validating Free-form Unicode Text
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regular-expressions-regex" class="md-nav__link">
-    Regular Expressions (Regex)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#allow-list-regular-expression-examples" class="md-nav__link">
-    Allow List Regular Expression Examples
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-side-vs-server-side-validation" class="md-nav__link">
-    Client-side vs Server-side Validation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validating-rich-user-content" class="md-nav__link">
-    Validating Rich User Content
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preventing-xss-and-content-security-policy" class="md-nav__link">
-    Preventing XSS and Content Security Policy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-upload-validation" class="md-nav__link">
-    File Upload Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="File Upload Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upload-verification" class="md-nav__link">
-    Upload Verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upload-storage" class="md-nav__link">
-    Upload Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#public-serving-of-uploaded-content" class="md-nav__link">
-    Public Serving of Uploaded Content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beware-of-specific-file-types" class="md-nav__link">
-    Beware of Specific File Types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-upload-verification" class="md-nav__link">
-    Image Upload Verification
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#email-address-validation" class="md-nav__link">
-    Email Address Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="Email Address Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntactic-validation" class="md-nav__link">
-    Syntactic Validation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semantic-validation" class="md-nav__link">
-    Semantic Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="Semantic Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disposable-email-addresses" class="md-nav__link">
-    Disposable Email Addresses
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-addressing" class="md-nav__link">
-    Sub-Addressing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2107,9 +1882,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Software_Supply_Chain_Security.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security.md
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Software_Supply_Chain_Security.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2118,6 +1913,265 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-threat-landscape" class="md-nav__link">
+    Overview of Threat Landscape
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigations-and-security-best-practices" class="md-nav__link">
+    Mitigations and Security Best Practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Mitigations and Security Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implement-strong-access-control" class="md-nav__link">
+    Implement Strong Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    Logging and Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-security-automation" class="md-nav__link">
+    Leverage Security Automation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-source-code-threats" class="md-nav__link">
+    Mitigating Source Code Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Mitigating Source Code Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#peer-reviews" class="md-nav__link">
+    Peer Reviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-config-of-version-control-systems" class="md-nav__link">
+    Secure Config of Version Control Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-development-platform" class="md-nav__link">
+    Secure Development Platform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-dependency-threats" class="md-nav__link">
+    Mitigating Dependency Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Mitigating Dependency Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assess-suppliers" class="md-nav__link">
+    Assess Suppliers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-and-monitor-software-dependencies" class="md-nav__link">
+    Understand and Monitor Software Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sast" class="md-nav__link">
+    SAST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lockfileversion-pinning" class="md-nav__link">
+    Lockfile/Version Pinning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-threats" class="md-nav__link">
+    Build Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-build-tools" class="md-nav__link">
+    Inventory Build Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harden-build-tools" class="md-nav__link">
+    Harden Build Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforce-code-signing" class="md-nav__link">
+    Enforce Code Signing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-private-artifact-repository" class="md-nav__link">
+    Use Private Artifact Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-source-control-for-build-scritps-and-config" class="md-nav__link">
+    Use Source Control for Build Scritps and Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-provenanceensure-sufficient-metadata-is-generated" class="md-nav__link">
+    Verify Provenance/Ensure Sufficient Metadata is Generated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ephemeral-isolated-builds" class="md-nav__link">
+    Ephemeral, Isolated Builds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-use-of-parameters" class="md-nav__link">
+    Limit use of Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-and-runtime-threats" class="md-nav__link">
+    Deployment and Runtime Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment and Runtime Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-final-build-binary" class="md-nav__link">
+    Scan Final Build Binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-deployed-software-for-vulnerabilities" class="md-nav__link">
+    Monitor Deployed Software for Vulnerabilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2504,44 +2558,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#goals-of-input-validation" class="md-nav__link">
-    Goals of Input Validation
+  <a href="#overview-of-threat-landscape" class="md-nav__link">
+    Overview of Threat Landscape
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-validation-strategies" class="md-nav__link">
-    Input Validation Strategies
+  <a href="#mitigations-and-security-best-practices" class="md-nav__link">
+    Mitigations and Security Best Practices
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementing-input-validation" class="md-nav__link">
-    Implementing Input Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementing Input Validation">
+    <nav class="md-nav" aria-label="Mitigations and Security Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#allowlist-vs-denylist" class="md-nav__link">
-    Allowlist vs Denylist
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implement-strong-access-control" class="md-nav__link">
+    Implement Strong Access Control
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#validating-free-form-unicode-text" class="md-nav__link">
-    Validating Free-form Unicode Text
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    Logging and Monitoring
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#regular-expressions-regex" class="md-nav__link">
-    Regular Expressions (Regex)
+  <a href="#leverage-security-automation" class="md-nav__link">
+    Leverage Security Automation
   </a>
   
 </li>
@@ -2550,74 +2605,32 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#allow-list-regular-expression-examples" class="md-nav__link">
-    Allow List Regular Expression Examples
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-source-code-threats" class="md-nav__link">
+    Mitigating Source Code Threats
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-side-vs-server-side-validation" class="md-nav__link">
-    Client-side vs Server-side Validation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validating-rich-user-content" class="md-nav__link">
-    Validating Rich User Content
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preventing-xss-and-content-security-policy" class="md-nav__link">
-    Preventing XSS and Content Security Policy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-upload-validation" class="md-nav__link">
-    File Upload Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="File Upload Validation">
+    <nav class="md-nav" aria-label="Mitigating Source Code Threats">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#upload-verification" class="md-nav__link">
-    Upload Verification
+  <a href="#peer-reviews" class="md-nav__link">
+    Peer Reviews
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#upload-storage" class="md-nav__link">
-    Upload Storage
+  <a href="#secure-config-of-version-control-systems" class="md-nav__link">
+    Secure Config of Version Control Systems
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#public-serving-of-uploaded-content" class="md-nav__link">
-    Public Serving of Uploaded Content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beware-of-specific-file-types" class="md-nav__link">
-    Beware of Specific File Types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-upload-verification" class="md-nav__link">
-    Image Upload Verification
+  <a href="#secure-development-platform" class="md-nav__link">
+    Secure Development Platform
   </a>
   
 </li>
@@ -2626,40 +2639,135 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#email-address-validation" class="md-nav__link">
-    Email Address Validation
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-dependency-threats" class="md-nav__link">
+    Mitigating Dependency Threats
   </a>
   
-    <nav class="md-nav" aria-label="Email Address Validation">
+    <nav class="md-nav" aria-label="Mitigating Dependency Threats">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntactic-validation" class="md-nav__link">
-    Syntactic Validation
+  <a href="#assess-suppliers" class="md-nav__link">
+    Assess Suppliers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#semantic-validation" class="md-nav__link">
-    Semantic Validation
-  </a>
-  
-    <nav class="md-nav" aria-label="Semantic Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#disposable-email-addresses" class="md-nav__link">
-    Disposable Email Addresses
+  <a href="#understand-and-monitor-software-dependencies" class="md-nav__link">
+    Understand and Monitor Software Dependencies
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-addressing" class="md-nav__link">
-    Sub-Addressing
+  <a href="#sast" class="md-nav__link">
+    SAST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lockfileversion-pinning" class="md-nav__link">
+    Lockfile/Version Pinning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-threats" class="md-nav__link">
+    Build Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inventory-build-tools" class="md-nav__link">
+    Inventory Build Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harden-build-tools" class="md-nav__link">
+    Harden Build Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforce-code-signing" class="md-nav__link">
+    Enforce Code Signing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-private-artifact-repository" class="md-nav__link">
+    Use Private Artifact Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-source-control-for-build-scritps-and-config" class="md-nav__link">
+    Use Source Control for Build Scritps and Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-provenanceensure-sufficient-metadata-is-generated" class="md-nav__link">
+    Verify Provenance/Ensure Sufficient Metadata is Generated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ephemeral-isolated-builds" class="md-nav__link">
+    Ephemeral, Isolated Builds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-use-of-parameters" class="md-nav__link">
+    Limit use of Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-and-runtime-threats" class="md-nav__link">
+    Deployment and Runtime Threats
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment and Runtime Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-final-build-binary" class="md-nav__link">
+    Scan Final Build Binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitor-deployed-software-for-vulnerabilities" class="md-nav__link">
+    Monitor Deployed Software for Vulnerabilities
   </a>
   
 </li>
@@ -2699,195 +2807,115 @@
   
 
 
-<h1 id="input-validation-cheat-sheet">Input Validation Cheat Sheet<a class="headerlink" href="#input-validation-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h1 id="software-supply-chain-security">Software Supply Chain Security<a class="headerlink" href="#software-supply-chain-security" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This article is focused on providing clear, simple, actionable guidance for providing Input Validation security functionality in your applications.</p>
-<h2 id="goals-of-input-validation">Goals of Input Validation<a class="headerlink" href="#goals-of-input-validation" title="Permanent link">&para;</a></h2>
-<p>Input validation is performed to ensure only properly formed data is entering the workflow in an information system, preventing malformed data from persisting in the database and triggering malfunction of various downstream components. Input validation should happen as early as possible in the data flow, preferably as soon as the data is received from the external party.</p>
-<p>Data from all potentially untrusted sources should be subject to input validation, including not only Internet-facing web clients but also backend feeds over extranets, from <a href="https://badcyber.com/several-polish-banks-hacked-information-stolen-by-unknown-attackers/">suppliers, partners, vendors or regulators</a>, each of which may be compromised on their own and start sending malformed data.</p>
-<p>Input Validation should not be used as the <em>primary</em> method of preventing <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">XSS</a>, <a href="SQL_Injection_Prevention_Cheat_Sheet.html">SQL Injection</a> and other attacks which are covered in respective <a href="https://cheatsheetseries.owasp.org/">cheat sheets</a> but can significantly contribute to reducing their impact if implemented properly.</p>
-<h2 id="input-validation-strategies">Input Validation Strategies<a class="headerlink" href="#input-validation-strategies" title="Permanent link">&para;</a></h2>
-<p>Input validation should be applied at both syntactic and semantic levels:</p>
+<p>No piece of software is developed in a vacuum; regardless of the technologies used to develop it, software is embedded in a Software Supply Chain (SSC). According to <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204D.pdf">NIST</a>, an entity's SSC can be defined as "a collection of steps that create, transform, and assess the quality and  policy conformance of software artifacts". From a developer's perspective, these steps span the entire SDLC and are accomplished using a wide range of components and tools. Common examples (by no means exhaustive) of components that are especially relevant from a developer's perspective include:</p>
 <ul>
-<li><strong>Syntactic</strong> validation should enforce correct syntax of structured fields (e.g. SSN, date, currency symbol).</li>
-<li><strong>Semantic</strong> validation should enforce correctness of their <em>values</em> in the specific business context (e.g. start date is before end date, price is within expected range).</li>
+<li>IDEs and code editors</li>
+<li>Internally developed source code</li>
+<li>Third-party software libraries</li>
+<li>Version control systems (VCS)</li>
+<li>Build tools (Maven, Rake, make, Grunt, etc.)</li>
+<li>CI/CD software (Jenkins, CircleCI, TeamCity, etc.)</li>
+<li>Configuration management tools (Ansible, Puppet, Chef, etc.)</li>
+<li>Package management software and ecosystems (pip, npm, Composer, etc.)</li>
 </ul>
-<p>It is always recommended to prevent attacks as early as possible in the processing of the user's (attacker's) request. Input validation can be used to detect unauthorized input before it is processed by the application.</p>
-<h2 id="implementing-input-validation">Implementing Input Validation<a class="headerlink" href="#implementing-input-validation" title="Permanent link">&para;</a></h2>
-<p>Input validation can be implemented using any programming technique that allows effective enforcement of syntactic and semantic correctness, for example:</p>
+<p>Each of these components must be secured; a flaw in a single component, such as a vulnerable third-party dependency or misconfigured VCS, can put an entire SSC in jeopardy. Thus, in order to strengthen Software Supply Chain Security (SCSS), developers should possess a general understanding of what the SSC is, common threats against it, and practices and techniques that can be applied to reduce SSC risk.</p>
+<h2 id="overview-of-threat-landscape">Overview of Threat Landscape<a class="headerlink" href="#overview-of-threat-landscape" title="Permanent link">&para;</a></h2>
+<p>Given the breadth and complexity of the SSC, it is unsurprising that the threat landscape for SSC is similarly expansive. Threats include <a href="https://fossa.com/blog/dependency-confusion-understanding-preventing-attacks/">dependency confusion</a>, compromise of an upstream providers infrastructure, theft of code signing certificates, and CI/CD system exploits. More broadly, threats may be grouped into four categories based upon what component of the supply chain they seek to compromise [<a href="#references">4,5</a>]:</p>
 <ul>
-<li>Data type validators available natively in web application frameworks (such as <a href="https://docs.djangoproject.com/en/1.11/ref/validators/">Django Validators</a>, <a href="https://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/package-summary.html#doc.Usage.validator">Apache Commons Validators</a> etc).</li>
-<li>Validation against <a href="http://json-schema.org/">JSON Schema</a> and <a href="https://www.w3schools.com/xml/schema_intro.asp">XML Schema (XSD)</a> for input in these formats.</li>
-<li>Type conversion (e.g. <code>Integer.parseInt()</code> in Java, <code>int()</code> in Python) with strict exception handling</li>
-<li>Minimum and maximum value range check for numerical parameters and dates, minimum and maximum length check for strings.</li>
-<li>Array of allowed values for small sets of string parameters (e.g. days of week).</li>
-<li>Regular expressions for any other structured data covering the whole input string <code>(^...$)</code> and <strong>not</strong> using "any character" wildcard (such as <code>.</code> or <code>\S</code>)</li>
+<li>Source code threats. These type of threats focus on violating the integrity of a source code which is then built and and deployed or potentially consumed by other software projects. Threats in this category include VCS exploits, the introduction of malicious or vulnerable code into a code base, or building code from an unauthorized branch.</li>
+<li>Build environment threats. These threats modify a software artifact but without altering the underlying source code or exploiting the build process itself. Examples include build cache poisoning, compromising a privileged account used by the build system, or publishing software built from an untrusted source.</li>
+<li>Dependency related threats. Threats that result from the consumption of both direct and transitive software dependencies. The most common threat is using a vulnerable or compromised dependency.</li>
+<li>Deployment and runtime threats. These threats exploit either the deployment process or runtime environment. Common examples include compromising a privilege CI/CD account, software misconfigurations, and deployment of compromised binaries.</li>
 </ul>
-<h3 id="allowlist-vs-denylist">Allowlist vs Denylist<a class="headerlink" href="#allowlist-vs-denylist" title="Permanent link">&para;</a></h3>
-<p>It is a common mistake to use denylist validation in order to try to detect possibly dangerous characters and patterns like the apostrophe <code>'</code> character, the string <code>1=1</code>, or the <code>&lt;script&gt;</code> tag, but this is a massively flawed approach as it is trivial for an attacker to bypass such filters.</p>
-<p>Plus, such filters frequently prevent authorized input, like <code>O'Brian</code>, where the <code>'</code> character is fully legitimate. For more information on XSS filter evasion please see <a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">this wiki page</a>.</p>
-<p>Allowlist validation is appropriate for all input fields provided by the user. allowlist validation involves defining exactly what IS authorized, and by definition, everything else is not authorized.</p>
-<p>If it's well structured data, like dates, social security numbers, zip codes, email addresses, etc. then the developer should be able to define a very strong validation pattern, usually based on regular expressions, for validating such input.</p>
-<p>If the input field comes from a fixed set of options, like a drop down list or radio buttons, then the input needs to match exactly one of the values offered to the user in the first place.</p>
-<h3 id="validating-free-form-unicode-text">Validating Free-form Unicode Text<a class="headerlink" href="#validating-free-form-unicode-text" title="Permanent link">&para;</a></h3>
-<p>Free-form text, especially with Unicode characters, is perceived as difficult to validate due to a relatively large space of characters that need to be allowed.</p>
-<p>It's also free-form text input that highlights the importance of proper context-aware output encoding and quite clearly demonstrates that input validation is <strong>not</strong> the primary safeguards against Cross-Site Scripting. If your users want to type apostrophe <code>'</code> or less-than sign <code>&lt;</code> in their comment field, they might have perfectly legitimate reason for that and the application's job is to properly handle it throughout the whole life cycle of the data.</p>
-<p>The primary means of input validation for free-form text input should be:</p>
+<p>The characteristics of threat actors seeking exploit the SSC are similarly diverse. Although SSC compromise is often associated with highly sophisticated threat actors, such sophistication is not inherently necessary for attacking the SSC, especially if the attack focuses on compromising the SSC of entities with poor security practices. Threat actor motive also varies widely, A SSC exploit can result in loss of confidentiality, integrity, and/or availability of any organization's assets and thus fulfill a wide range of attacker goals such as espionage or financial gain.</p>
+<p>Finally, it must be recognized that many SSC threats have the capability to propagate across many entities. This is due to consumer-supplier relationship that is integral to an SSC. For example, uf a large-scale software supplier, whether proprietary or open-source, is compromised, many downstream, consuming entities could also be impacted as a result. The 2020 Solarwind and 2021 Codecov incidents are excellent real-world examples of this.</p>
+<h2 id="mitigations-and-security-best-practices">Mitigations and Security Best Practices<a class="headerlink" href="#mitigations-and-security-best-practices" title="Permanent link">&para;</a></h2>
+<p>Mitigating SSC related risk can seem daunting, yet it need not be. Even for sophisticated attacks that may focus on compromising upstream suppliers, individual organization can take reasonable steps to defend its own assets and mitigate risk even if its supplier is compromised. Although some parts of SSCS may remain outside direct control of development teams, those teams must still do their part to improve SSCS in their organization; the guidance below is intended as starting point for developers to do just that.</p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<p>The practices described below are general techniques that can be used to mitigate risk related to a wide variety of threat types.</p>
+<h4 id="implement-strong-access-control">Implement Strong Access Control<a class="headerlink" href="#implement-strong-access-control" title="Permanent link">&para;</a></h4>
+<p>Compromised accounts, particularly privileged ones, represents a significant threats to SSCs. Account takeover can allow an attacker can perform a variety of malicious acts including i^njecting code into legitimate dependencies, manipulating CI/CD pipeline execution, and replacing a benign artifact with a malicious one. Strong access control for build, development, version control, and similar environments is thus critical. Best practices include adhering to  the basic security principles of least privileges and separation of duties, enforcing MFA, rotating credentials, and ensuring credentials are never stored or transmitted in clear text or committed to source control.</p>
+<h4 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">&para;</a></h4>
+<p>When considering SSCS, the importance of detective controls should not be overlooked; these controls are essential for detecting attacks and enabling prompt respond. In the context of SSCS, logging is critical. All systems involved in the SSC, including VCS, build tools, delivery mechanisms, artifact repositories, and the systems responsible for running applications should be configured to log authentication attempts, configuration changes, and other events that could assist in identifying anomalous behavior or that could prove crucial for incident response efforts. Logs throughout the SSC must be sufficient in both depth and breadth to support detection and response</p>
+<p>However, logging events is not sufficient. These logs must be monitored, and, if necessary, acted upon. A centralized SIEM, log aggregator, or similar tool is preferred, especially given the complexity of SSCs. Regardless of the technology used, the basic objective remains the same: log data should be actionable.</p>
+<h4 id="leverage-security-automation">Leverage Security Automation<a class="headerlink" href="#leverage-security-automation" title="Permanent link">&para;</a></h4>
+<p>For complex SSCs, automation of security tasks, such as scanning, monitoring, and testing is critical. Such automation, while not a replacement for manual reviews and other actions performed by skilled professionals, is capable of detecting, and in some cases responding to, vulnerabilities and potential attacks with a scale and consistency that is hard to achieve through manual human intervention. Types of tools that support automation include SAST, DAST, SCA, container image scanners and more. The exact tools most capable of delivering value to an organization will vary significantly based on the characteristics of the organization. However, regardless of the type of tools and vendors used, it is important to acknowledge that these tools themselves must be mainlined, secured, and configured correctly. Failure to do so could actually increase SSC risk for an organization, or at the very least, fail to bring meaningful benefit to the organization. Finally, it must be clearly understood that these tools are but one component of an overall SSCS program; they cannot be considered a comprehensive solution or be relied on to identify all vulnerabilities.</p>
+<h3 id="mitigating-source-code-threats">Mitigating Source Code Threats<a class="headerlink" href="#mitigating-source-code-threats" title="Permanent link">&para;</a></h3>
+<p>The practices described below can help reduce SSC risk associated with source code and development.</p>
+<h4 id="peer-reviews">Peer Reviews<a class="headerlink" href="#peer-reviews" title="Permanent link">&para;</a></h4>
+<p>Manual code reviews are an important, relatively low cost technique for reducing SSC risk; these reviews can act as both detective controls and deterrents. Reviews should be performed by peers possessing both experience in the technology being used and secure coding processes and should occur before code is merged within a source control systems [<a href="#references">3</a>]. The reviews should look for both unintentional security flaws as well as intentional code that could serve malicious purposes. The results of the review should be documented for later review if needed.</p>
+<h4 id="secure-config-of-version-control-systems">Secure Config of Version Control Systems<a class="headerlink" href="#secure-config-of-version-control-systems" title="Permanent link">&para;</a></h4>
+<p>Compromise or abuse of the source control system is consistently recognized as a significant SSC risk [<a href="#references">4,5</a>]. The general security best practices of strong access control and logging and monitoring are two methods to help secure VCS. Security features specific to the VCS system, such as protected branches and merge policies in git, should also be leveraged. Regardless of any security controls added a VCS, it must be remember that secrets should never be committed to these systems.</p>
+<h4 id="secure-development-platform">Secure Development Platform<a class="headerlink" href="#secure-development-platform" title="Permanent link">&para;</a></h4>
+<p>IDEs, development plugins, and similar tools can help assist the development process. However, like all pieces of software, these components can have vulnerabilities and become an attack vector. Thus, it is important to take steps not only to ensure these tools are used securely, but also to secure the underlying system. The development system should have endpoint security software installed and should have threat assessments performed against it [<a href="#references">2</a>]. Only trusted, well-vetted software should be used in the development process; this includes not only "core" development tools such as IDEs, but also any plugins or extensions.  Additionally, these tools should be included as part of an organization's system inventory.</p>
+<h3 id="mitigating-dependency-threats">Mitigating Dependency Threats<a class="headerlink" href="#mitigating-dependency-threats" title="Permanent link">&para;</a></h3>
+<p>Best practices and techniques related to secure use of dependencies are described below.</p>
+<h4 id="assess-suppliers">Assess Suppliers<a class="headerlink" href="#assess-suppliers" title="Permanent link">&para;</a></h4>
+<p>Before incorporating a third-party service, product, or software component into the SSC, the vendor and specific offering should both be thoroughly assessed for security. This applies to both open-source and proprietary offerings. The form and extent of the analysis will vary substantially in accordance with both the criticality and nature of the component being considered. Component maturity, security history, and the vendor's response to past vulnerabilities are useful information in nearly any case. For larger vendors or service offerings, determining whether or not a solution has been evaluated against third-party assessments and certifications, such as those performed against <a href="https://marketplace.fedramp.gov/products">FedRAMP</a>, <a href="https://cloudsecurityalliance.org/star/registry">CSA</a>, or various ISO standards (ISO/IEC 27001, ISO/IEC 15408,
+ISO/IEC 27034), can be a useful data point, but must not be relied on exclusively.</p>
+<p>Due to its transparent nature, open-source projects offer additional assessment opportunities. Questions to consider include [<a href="#references">6</a>]:</p>
 <ul>
-<li><strong>Normalization:</strong> Ensure canonical encoding is used across all the text and no invalid characters are present.</li>
-<li><strong>Character category allowlisting:</strong> Unicode allows listing categories such as "decimal digits" or "letters" which not only covers the Latin alphabet but also various other scripts used globally (e.g. Arabic, Cyrillic, CJK ideographs etc).</li>
-<li><strong>Individual character allowlisting:</strong> If you allow letters and ideographs in names and also want to allow apostrophe <code>'</code> for Irish names, but don't want to allow the whole punctuation category.</li>
+<li>Is the project actively maintained?</li>
+<li>Is the project sufficiently popular and well-known in the applicable community?</li>
+<li>Is the project sufficiently mature?</li>
+<li>Is the product or version being evaluated a "release" version, e.g. not an alpha, beta, or comparable versions?</li>
+<li>Given the complexity of the project, does the project have a sufficient number of maintainers and contributors?</li>
+<li>Does the project keep its dependencies updated?</li>
+<li>Does the project have sufficient test coverage and do the tests include security relevant rules?</li>
+<li>Is the project well-documented and does the document include guidance on how to use the component securely?</li>
+<li>Does the project have an established and documented process for reporting vulnerabilities and are these vulnerabilities addressed in a timely manner?</li>
+<li>Is the intended usage of the project consistent with the project's license?</li>
 </ul>
-<p>References:</p>
+<h4 id="understand-and-monitor-software-dependencies">Understand and Monitor Software Dependencies<a class="headerlink" href="#understand-and-monitor-software-dependencies" title="Permanent link">&para;</a></h4>
+<p>While third-party software dependencies can greatly accelerate the development process, they are also one of the leading risks associated with modern applications. Dependencies must not only be carefully selected before they are incorporated into an application, but also carefully monitored and maintained throughout the SDLC. In order achieve this, having insight into the various dependencies consumed by software is a crucial first step. To facilitate this, SBOMs may be used. Both production and consumption of these SBOMs should be automated, preferably as part of the  organization's CI/CD process.</p>
+<p>Once the organization has inventoried depdencies, it must also monitor them for known vulnerabilities. This should also be automated as much as possible; tools such as <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency Check</a> or <a href="https://retirejs.github.io/retire.js/">retire.js</a> can assist in this process. Additionally, sources such as the <a href="https://nvd.nist.gov/">NVD</a>, <a href="https://osv.dev/list">OSVDB</a>, or <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a> may also be monitored for known vulnerabilities related to dependencies used in the organization's SSC.</p>
+<h4 id="sast">SAST<a class="headerlink" href="#sast" title="Permanent link">&para;</a></h4>
+<p>Although using SAST to detect potential security in custom developed code is a widely used security technique, it can also be used on OSS components within the SSC [<a href="#references">2</a>]. As when using SAST on internally developed code, one must recognize that these tools can produce both false positives and false negatives. Thus, SAST results must not be accepted without manual verification and should not be interpreted as providing a comprehensive view of the project's security. However, as long as their limitations are understood, SAST scans can prove useful when analyzing both internally developed or OSS code.</p>
+<h4 id="lockfileversion-pinning">Lockfile/Version Pinning<a class="headerlink" href="#lockfileversion-pinning" title="Permanent link">&para;</a></h4>
+<p>To reduce the likelihood that a compromised or vulnerable version is unwittingly pulled into an application, one should limit the applications dependencies to a specific version that has been previously verified as legitimate and secure. This is commonly accomplished using lockfiles such as the package-lock.json file used by npm.</p>
+<h3 id="build-threats">Build Threats<a class="headerlink" href="#build-threats" title="Permanent link">&para;</a></h3>
+<p>The section below describes techniques that are especially relevant for securing build related threats.</p>
+<h4 id="inventory-build-tools">Inventory Build Tools<a class="headerlink" href="#inventory-build-tools" title="Permanent link">&para;</a></h4>
+<p>Knowing the components used in the SSC is essential to the security of that SSC. This concept extends to build tools. An inventory of all build tools, including versions and any plugins, should be automatically collected and mainlined, One must also monitor vulnerability databases, vendor security advisories and other sources for any vulnerabilities related to the identified build tools.</p>
+<h4 id="harden-build-tools">Harden Build Tools<a class="headerlink" href="#harden-build-tools" title="Permanent link">&para;</a></h4>
+<p>Compromised build tools can enable a wide range of exploits and thus represent an appealing target for attackers. As such, all infrastructure and tools used in build process must be hardened to mitigate risk. Techniques for hardening build environments include [<a href="#references">2</a>]:</p>
 <ul>
-<li><a href="https://web.archive.org/web/20170717174432/https://ipsec.pl/python/2017/input-validation-free-form-unicode-text-python.html/">Input validation of free-form Unicode text in Python</a></li>
-<li><a href="https://unicode.org/reports/tr31/">UAX 31: Unicode Identifier and Pattern Syntax</a></li>
-<li><a href="https://www.unicode.org/reports/tr15/">UAX 15: Unicode Normalization Forms</a></li>
-<li><a href="https://unicode.org/reports/tr24/">UAX 24: Unicode Script Property</a></li>
+<li>Ensure build tools are located in an appropriately segregated networks.</li>
+<li>Use DLP and other tools and techniques to detect and prevent exfiltration.</li>
+<li>Disable/remove any unused services.</li>
+<li>Use version control systems to manage and store pipeline configurations.</li>
 </ul>
-<h3 id="regular-expressions-regex">Regular Expressions (Regex)<a class="headerlink" href="#regular-expressions-regex" title="Permanent link">&para;</a></h3>
-<p>Developing regular expressions can be complicated, and is well beyond the scope of this cheat sheet.</p>
-<p>There are lots of resources on the internet about how to write regular expressions, including this <a href="https://www.regular-expressions.info/">site</a> and the <a href="https://owasp.org/www-community/OWASP_Validation_Regex_Repository">OWASP Validation Regex Repository</a>.</p>
-<p>When designing regular expression, be aware of <a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS">RegEx Denial of Service (ReDoS) attacks</a>. These attacks cause a program using a poorly designed Regular Expression to operate very slowly and utilize CPU resources for a very long time.</p>
-<p>In summary, input validation should:</p>
-<ul>
-<li>Be applied to all input data, at minimum.</li>
-<li>Define the allowed set of characters to be accepted.</li>
-<li>Define a minimum and maximum length for the data (e.g. <code>{1,25}</code>).</li>
-</ul>
-<h2 id="allow-list-regular-expression-examples">Allow List Regular Expression Examples<a class="headerlink" href="#allow-list-regular-expression-examples" title="Permanent link">&para;</a></h2>
-<p>Validating a U.S. Zip Code (5 digits plus optional -4)</p>
-<div class="highlight"><pre><span></span><code>^\d{5}(-\d{4})?$
-</code></pre></div>
-<p>Validating U.S. State Selection From a Drop-Down Menu</p>
-<div class="highlight"><pre><span></span><code>^(AA|AE|AP|AL|AK|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|
-HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MT|NE|
-NV|NH|NJ|NM|NY|NC|ND|MP|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|
-TX|UT|VT|VI|VA|WA|WV|WI|WY)$
-</code></pre></div>
-<p><strong>Java Regex Usage Example:</strong></p>
-<p>Example validating the parameter "zip" using a regular expression.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Pattern</span><span class="w"> </span><span class="n">zipPattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;^\d{5}(-\d{4})?$&quot;</span><span class="p">);</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="w"> </span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">zipCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;zip&quot;</span><span class="w"> </span><span class="p">);</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">zipPattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="w"> </span><span class="n">zipCode</span><span class="w"> </span><span class="p">).</span><span class="na">matches</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">YourValidationException</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Improper zipcode format.&quot;</span><span class="w"> </span><span class="p">);</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">      </span><span class="c1">// do what you want here, after its been validated ..</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">YourValidationException</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">response</span><span class="p">.</span><span class="na">sendError</span><span class="p">(</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">SC_BAD_REQUEST</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Some Allowlist validators have also been predefined in various open source packages that you can leverage. For example:</p>
-<ul>
-<li><a href="http://commons.apache.org/proper/commons-validator/">Apache Commons Validator</a></li>
-</ul>
-<h2 id="client-side-vs-server-side-validation">Client-side vs Server-side Validation<a class="headerlink" href="#client-side-vs-server-side-validation" title="Permanent link">&para;</a></h2>
-<p>Input validation <strong>must</strong> be implemented on the server-side before any data is processed by an application’s functions, as any JavaScript-based input validation performed on the client-side can be circumvented by an attacker who disables JavaScript or uses a web proxy. Implementing both client-side JavaScript-based validation for UX and server-side validation for security is the recommended approach, leveraging each for their respective strengths.</p>
-<h2 id="validating-rich-user-content">Validating Rich User Content<a class="headerlink" href="#validating-rich-user-content" title="Permanent link">&para;</a></h2>
-<p>It is very difficult to validate rich content submitted by a user. For more information, please see the XSS cheat sheet on <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Sanitizing HTML Markup with a Library Designed for the Job</a>.</p>
-<h2 id="preventing-xss-and-content-security-policy">Preventing XSS and Content Security Policy<a class="headerlink" href="#preventing-xss-and-content-security-policy" title="Permanent link">&para;</a></h2>
-<p>All user data controlled must be encoded when returned in the HTML page to prevent the execution of malicious data (e.g. XSS). For example <code>&lt;script&gt;</code> would be returned as <code>&amp;lt;script&amp;gt;</code></p>
-<p>The type of encoding is specific to the context of the page where the user controlled data is inserted. For example, HTML entity encoding is appropriate for data placed into the HTML body. However, user data placed into a script would need JavaScript specific output encoding.</p>
-<p>Detailed information on XSS prevention here: <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">OWASP XSS Prevention Cheat Sheet</a></p>
-<h2 id="file-upload-validation">File Upload Validation<a class="headerlink" href="#file-upload-validation" title="Permanent link">&para;</a></h2>
-<p>Many websites allow users to upload files, such as a profile picture or more. This section helps provide that feature securely.</p>
-<p>Check the <a href="File_Upload_Cheat_Sheet.html">File Upload Cheat Sheet</a>.</p>
-<h3 id="upload-verification">Upload Verification<a class="headerlink" href="#upload-verification" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use input validation to ensure the uploaded filename uses an expected extension type.</li>
-<li>Ensure the uploaded file is not larger than a defined maximum file size.</li>
-<li>If the website supports ZIP file upload, do a validation check before unzipping the file. The check includes the target path, level of compression, estimated unzip size.</li>
-</ul>
-<h3 id="upload-storage">Upload Storage<a class="headerlink" href="#upload-storage" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use a new filename to store the file on the OS. Do not use any user controlled text for this filename or for the temporary filename.</li>
-<li>When the file is uploaded to web, it's suggested to rename the file on storage. For example, the uploaded filename is <em>test.JPG</em>, rename it to <em>JAI1287uaisdjhf.JPG</em> with a random filename. The purpose of doing it to prevent the risks of direct file access and ambiguous filename to evade the filter, such as <code>test.jpg;.asp or /../../../../../test.jpg</code>.</li>
-<li>Uploaded files should be analyzed for malicious content (anti-malware, static analysis, etc).</li>
-<li>The file path should not be able to specify by client-side. It's decided by server-side.</li>
-</ul>
-<h3 id="public-serving-of-uploaded-content">Public Serving of Uploaded Content<a class="headerlink" href="#public-serving-of-uploaded-content" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Ensure uploaded images are served with the correct content-type (e.g. image/jpeg, application/x-xpinstall)</li>
-</ul>
-<h3 id="beware-of-specific-file-types">Beware of Specific File Types<a class="headerlink" href="#beware-of-specific-file-types" title="Permanent link">&para;</a></h3>
-<p>The upload feature should be using an allowlist approach to only allow specific file types and extensions. However, it is important to be aware of the following file types that, if allowed, could result in security vulnerabilities:</p>
-<ul>
-<li><strong>crossdomain.xml</strong> / <strong>clientaccesspolicy.xml:</strong> allows cross-domain data loading in Flash, Java and Silverlight. If permitted on sites with authentication this can permit cross-domain data theft and CSRF attacks. Note this can get pretty complicated depending on the specific plugin version in question, so its best to just prohibit files named "crossdomain.xml" or "clientaccesspolicy.xml".</li>
-<li><strong>.htaccess</strong> and <strong>.htpasswd:</strong> Provides server configuration options on a per-directory basis, and should not be permitted. See <a href="http://en.wikipedia.org/wiki/Htaccess">HTACCESS documentation</a>.</li>
-<li>Web executable script files are suggested not to be allowed such as <code>aspx, asp, css, swf, xhtml, rhtml, shtml, jsp, js, pl, php, cgi</code>.</li>
-</ul>
-<h3 id="image-upload-verification">Image Upload Verification<a class="headerlink" href="#image-upload-verification" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use image rewriting libraries to verify the image is valid and to strip away extraneous content.</li>
-<li>Set the extension of the stored image to be a valid image extension based on the detected content type of the image from image processing (e.g. do not just trust the header from the upload).</li>
-<li>Ensure the detected content type of the image is within a list of defined image types (jpg, png, etc)</li>
-</ul>
-<h2 id="email-address-validation">Email Address Validation<a class="headerlink" href="#email-address-validation" title="Permanent link">&para;</a></h2>
-<h3 id="syntactic-validation">Syntactic Validation<a class="headerlink" href="#syntactic-validation" title="Permanent link">&para;</a></h3>
-<p>The format of email addresses is defined by <a href="https://tools.ietf.org/html/rfc5321#section-4.1.2">RFC 5321</a>, and is far more complicated than most people realise. As an example, the following are all considered to be valid email addresses:</p>
-<ul>
-<li><code>"&gt;&lt;script&gt;alert(1);&lt;/script&gt;"@example.org</code></li>
-<li><code>user+subaddress@example.org</code></li>
-<li><code>user@[IPv6:2001:db8::1]</code></li>
-<li><code>" "@example.org</code></li>
-</ul>
-<p>Properly parsing email addresses for validity with regular expressions is very complicated, although there are a number of <a href="https://datatracker.ietf.org/doc/html/draft-seantek-mail-regexen-03#rfc.section.3">publicly available documents on regex</a>.</p>
-<p>The biggest caveat on this is that although the RFC defines a very flexible format for email addresses, most real world implementations (such as mail servers) use a far more restricted address format, meaning that they will reject addresses that are <em>technically</em> valid.  Although they may be technically correct, these addresses are of little use if your application will not be able to actually send emails to them.</p>
-<p>As such, the best way to validate email addresses is to perform some basic initial validation, and then pass the address to the mail server and catch the exception if it rejects it. This means that the application can be confident that its mail server can send emails to any addresses it accepts. The initial validation could be as simple as:</p>
-<ul>
-<li>The email address contains two parts, separated with an <code>@</code> symbol.</li>
-<li>The email address does not contain dangerous characters (such as backticks, single or double quotes, or null bytes).<ul>
-<li>Exactly which characters are dangerous will depend on how the address is going to be used (echoed in page, inserted into database, etc).</li>
-</ul>
-</li>
-<li>The domain part contains only letters, numbers, hyphens (<code>-</code>) and periods (<code>.</code>).</li>
-<li>The email address is a reasonable length:<ul>
-<li>The local part (before the <code>@</code>) should be no more than 63 characters.</li>
-<li>The total length should be no more than 254 characters.</li>
-</ul>
-</li>
-</ul>
-<h3 id="semantic-validation">Semantic Validation<a class="headerlink" href="#semantic-validation" title="Permanent link">&para;</a></h3>
-<p>Semantic validation is about determining whether the email address is correct and legitimate. The most common way to do this is to send an email to the user, and require that they click a link in the email, or enter a code that has been sent to them. This provides a basic level of assurance that:</p>
-<ul>
-<li>The email address is correct.</li>
-<li>The application can successfully send emails to it.</li>
-<li>The user has access to the mailbox.</li>
-</ul>
-<p>The links that are sent to users to prove ownership should contain a token that is:</p>
-<ul>
-<li>At least 32 characters long.</li>
-<li>Generated using a <a href="Cryptographic_Storage_Cheat_Sheet.html#secure-random-number-generation">secure source of randomness</a>.</li>
-<li>Single use.</li>
-<li>Time limited (e.g, expiring after eight hours).</li>
-</ul>
-<p>After validating the ownership of the email address, the user should then be required to authenticate on the application through the usual mechanism.</p>
-<h4 id="disposable-email-addresses">Disposable Email Addresses<a class="headerlink" href="#disposable-email-addresses" title="Permanent link">&para;</a></h4>
-<p>In some cases, users may not want to give their real email address when registering on the application, and will instead provide a disposable email address. These are publicly available addresses that do not require the user to authenticate, and are typically used to reduce the amount of spam received by users' primary email addresses.</p>
-<p>Blocking disposable email addresses is almost impossible, as there are a large number of websites offering these services, with new domains being created every day. There are a number of publicly available lists and commercial lists of known disposable domains, but these will always be incomplete.</p>
-<p>If these lists are used to block the use of disposable email addresses then the user should be presented with a message explaining why they are blocked (although they are likely to simply search for another disposable provider rather than giving their legitimate address).</p>
-<p>If it is essential that disposable email addresses are blocked, then registrations should only be allowed from specifically-allowed email providers. However, if this includes public providers such as Google or Yahoo, users can simply register their own disposable address with them.</p>
-<h4 id="sub-addressing">Sub-Addressing<a class="headerlink" href="#sub-addressing" title="Permanent link">&para;</a></h4>
-<p>Sub-addressing allows a user to specify a <em>tag</em> in the local part of the email address (before the <code>@</code> sign), which will be ignored by the mail server. For example, if that <code>example.org</code> domain supports sub-addressing, then the following email addresses are equivalent:</p>
-<ul>
-<li><code>user@example.org</code></li>
-<li><code>user+site1@example.org</code></li>
-<li><code>user+site2@example.org</code></li>
-</ul>
-<p>Many mail providers (such as Microsoft Exchange) do not support sub-addressing. The most notable provider who does is Gmail, although there are many others that also do.</p>
-<p>Some users will use a different <em>tag</em> for each website they register on, so that if they start receiving spam to one of the sub-addresses they can identify which website leaked or sold their email address.</p>
-<p>Because it could allow users to register multiple accounts with a single email address, some sites may wish to block sub-addressing by stripping out everything between the <code>+</code> and <code>@</code> signs. This is not generally recommended, as it suggests that the website owner is either unaware of sub-addressing or wishes to prevent users from identifying them when they leak or sell email addresses. Additionally, it can be trivially bypassed by using <a href="#disposable-email-addresses">disposable email addresses</a>, or simply registering multiple email accounts with a trusted provider.</p>
+<h4 id="enforce-code-signing">Enforce Code Signing<a class="headerlink" href="#enforce-code-signing" title="Permanent link">&para;</a></h4>
+<p>From a the perspective of software consumers, only accepting components which have been digitally signed and validating the signature before utilizing the software is an important task step in ensuring the component is authentic and has not been tampered with. For those performing code signing, it is imperative that the code signing infrastructure is thoroughly hardened. Failure to do so can result in compromise of the code signing system and lead further exploits, including those targeting consumers of the software.</p>
+<h4 id="use-private-artifact-repository">Use Private Artifact Repository<a class="headerlink" href="#use-private-artifact-repository" title="Permanent link">&para;</a></h4>
+<p>Using a private artifact repository increases the control an organization has over the various artifacts that are used within the SSC. Artifacts should be reviewed before being allowed in the private repository and organizations must ensure that usage of these repositories cannot be bypassed. Although usage of private repositories can introduce extra maintenance or reduce agility, they can also be an important component of SSCS, especially for sensitive or critical applications.</p>
+<h4 id="use-source-control-for-build-scritps-and-config">Use Source Control for Build Scritps and Config<a class="headerlink" href="#use-source-control-for-build-scritps-and-config" title="Permanent link">&para;</a></h4>
+<p>The benefits of VCSs can be realized for items beyond source control; this is especially true for config and scripts related to CI/CD pipelines. Enforcing version control for these files allows one to incorporate reviews, merge rules, and like controls into the config update process. Using VCS also increase visibility, allowing one easy visibility into any changes introduced, whether malicious or benign [<a href="#references">2</a>].</p>
+<h4 id="verify-provenanceensure-sufficient-metadata-is-generated">Verify Provenance/Ensure Sufficient Metadata is Generated<a class="headerlink" href="#verify-provenanceensure-sufficient-metadata-is-generated" title="Permanent link">&para;</a></h4>
+<p>Having assurance that an SSC component comes from a trusted source and has not been tampered with is a important part of SSCS. Generation and consumption of provenance, defined in <a href="https://slsa.dev/spec/v1.0/provenance">SLSA 1.0</a> as "the verifiable information about software artifacts describing where, when and how something was produced"cis an important part of this. The provenance should be generated by the build platform (as opposed to a local development system), be very difficult for attackers to forge, and contain all details necessary to accurately link the result back to the builder [<a href="#references">7</a>]. SLSA 1.0 compliant provenance can be generated using builders such as <a href="https://github.com/buildsec/frsca">FRSCA</a> or <a href="https://github.com/slsa-framework/slsa-github-generator">Github Actions</a> and verified <a href="https://github.com/slsa-framework/slsa-verifier?tab=readme-ov-file">using SLSA Verifier</a></p>
+<h4 id="ephemeral-isolated-builds">Ephemeral, Isolated Builds<a class="headerlink" href="#ephemeral-isolated-builds" title="Permanent link">&para;</a></h4>
+<p>Reuse and sharing of build environments may allow attackers to perform cache poising or otherwise more readily inject malicious code.  Builds should be performed in isolated, temporary ("ephemeral") environments. This can be achieved using technologies such as VMs or containers for builds and ensuring the environment is immediately destroyed afterward.</p>
+<h4 id="limit-use-of-parameters">Limit use of Parameters<a class="headerlink" href="#limit-use-of-parameters" title="Permanent link">&para;</a></h4>
+<p>Although passing user controllable parameters to a build process can increase flexibility, it also increases risk. If parameters can be modified by users in order to alter how a build is performed, an attacker with sufficient permission will also be able to modify the parameters and potentially compromise the build process [<a href="#references">8</a>]. One should thus make an effort to minimize or eliminate any user controllable build parameters.</p>
+<h3 id="deployment-and-runtime-threats">Deployment and Runtime Threats<a class="headerlink" href="#deployment-and-runtime-threats" title="Permanent link">&para;</a></h3>
+<p>The section below outlines a couple of techniques that can be used to protect software during the deployment and runtime phases.</p>
+<h4 id="scan-final-build-binary">Scan Final Build Binary<a class="headerlink" href="#scan-final-build-binary" title="Permanent link">&para;</a></h4>
+<p>Once the build process has finished, one should not simply assume that the final result is secure. Binary composition analysis can help detect exposed secrets, detect unauthorized components or content, and verify integrity [<a href="#references">2</a>]. This task should be performed by both suppliers and consumers.</p>
+<h4 id="monitor-deployed-software-for-vulnerabilities">Monitor Deployed Software for Vulnerabilities<a class="headerlink" href="#monitor-deployed-software-for-vulnerabilities" title="Permanent link">&para;</a></h4>
+<p>SSCS does not end with the deployment of the software; the deployed software must be monitored and maintained to reduce risk. New vulnerabilities, whether introduced due to an update or simply newly discovered (or made public), are a continual concern in software systems [<a href="#references">4</a>]. When performing this monitoring, a wholistic approached must be used; code dependencies, container images, web servers, and operating system components are just a sampling of items that must be consider.To support this monitoring, an accurate and up-to-date inventory of system components is critical. Additionally, insecure configuration changes must be monitored and acted upon.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://owasp.org/www-project-proactive-controls/v4/en/c3-validate-all-input">OWASP Top 10 Proactive Controls 2024: C3: Validate all Input &amp; Handle Exceptions</a></li>
-<li><a href="https://cwe.mitre.org/data/definitions/20.html">CWE-20 Improper Input Validation</a></li>
-<li><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP Top 10 2021: A03:2021-Injection</a></li>
-<li><a href="https://learn.snyk.io/lesson/improper-input-validation/">Snyk: Improper Input Validation</a></li>
-</ul>
+<ol>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204D.pdf">NIST SP 800-204D: Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines</a></li>
+<li><a href="https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF">Securing the Software Supply Chain: Recommended Practices Guide for Developers</a></li>
+<li><a href="https://cloud.google.com/software-supply-chain-security/docs/safeguard-source">Google Cloud Software Supply Chain Security: Safeguard Source</a></li>
+<li><a href="https://cloud.google.com/software-supply-chain-security/docs/attack-vectors">Google Cloud Software Supply Chain Security: Attack Vectors</a></li>
+<li><a href="https://slsa.dev/spec/v1.0/threats">SLSA 1.0: Threats</a></li>
+<li><a href="https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software">OpenSSF: Concise Guide for Evaluating Open Source Software</a></li>
+<li><a href="https://slsa.dev/spec/v1.0/requirements#provenance-generation">SLSA 1.0: Requirements</a></li>
+<li><a href="https://cloud.google.com/software-supply-chain-security/docs/safeguard-builds">Google Cloud Security Supply Chain Security: Safeguard Builds</a></li>
+</ol>
 
 
 
